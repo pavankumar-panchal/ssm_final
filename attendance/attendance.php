@@ -3,7 +3,6 @@ if ($usertype == 'GUEST')
   header("location:../index.php");
 else {
   ?>
-
   <link rel="stylesheet" type="text/css" href="../style/main.css">
   <script language="javascript" src="../functions/attendancereport.js" type="text/javascript"></script>
   <div id="contentdiv" style="display:block;">
