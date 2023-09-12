@@ -1,0 +1,27 @@
+stdClass Object
+(
+    [firstname] => fgfg
+    [email] => nithya.p@relyonsoft.com
+    [hobby] => Array
+        (
+            [0] => stdClass Object
+                (
+                    [hobbyName] => sport
+                    [isHobby] => 1
+                )
+
+            [1] => stdClass Object
+                (
+                    [hobbyName] => reading
+                    [isHobby] => 1
+                )
+
+            [2] => stdClass Object
+                (
+                    [hobbyName] => music
+                    [isHobby] => 1
+                )
+
+        )
+
+)

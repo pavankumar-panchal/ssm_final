@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="attendancereport.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006848953105098" remote="129006848950000000" />
+<file name="callregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325410103281250" remote="129325410100000000" />
+<file name="categories.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006849112963170" remote="129006849110000000" />
+<file name="Copy of callregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129323034966718750" remote="129323034960000000" />
+<file name="Copy of emailregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325489812812500" remote="129325489810000000" />
+<file name="Copy of errorregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325571071875000" remote="129325571070000000" />
+<file name="Copy of inhouseregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325601480312500" remote="129325601480000000" />
+<file name="Copy of onsiteregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325631483750000" remote="129325631480000000" />
+<file name="Copy of referenceregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325664313125000" remote="129325664310000000" />
+<file name="Copy of requirementregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325683696250000" remote="129325683690000000" />
+<file name="Copy of skyperegister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325704255312500" remote="129325704250000000" />
+<file name="createuser.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006849234380298" remote="129006849230000000" />
+<file name="dealermaster.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006849389394186" remote="129006849380000000" />
+<file name="emailregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325640539062500" remote="129325640530000000" />
+<file name="errorregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325640683281250" remote="129325640680000000" />
+<file name="inhouseregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325641457656250" remote="129325641450000000" />
+<file name="invoicebilling.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006849928348722" remote="129006849920000000" />
+<file name="locationmaster.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006850051641018" remote="129006850050000000" />
+<file name="onsiteregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325673358593750" remote="129325673350000000" />
+<file name="osmaster.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006850244314530" remote="129006850240000000" />
+<file name="productmaster.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006850408547994" remote="129006850400000000" />
+<file name="receiptsbilling.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006850635443322" remote="129006850630000000" />
+<file name="recordauthorization.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006850725763914" remote="129006850720000000" />
+<file name="referenceregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325683090781250" remote="129325683090000000" />
+<file name="requirementregister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129325697715468750" remote="129325697710000000" />
+<file name="skyperegister.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129326283769687500" remote="129326283760000000" />
+<file name="supportunits.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006851300502906" remote="129006851300000000" />
+<file name="versionmaster.php" server="C:/xampp/htdocs/Sarlimax-SSM/" local="129006851420044866" remote="129006851420000000" />
+<file name="attendancereport.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006848953105098" remote="129006848950000000" />
+<file name="callregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325410103281250" remote="129325410100000000" />
+<file name="categories.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006849112963170" remote="129006849110000000" />
+<file name="Copy of callregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129323034966718750" remote="129323034960000000" />
+<file name="Copy of emailregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325489812812500" remote="129325489810000000" />
+<file name="Copy of errorregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325571071875000" remote="129325571070000000" />
+<file name="Copy of inhouseregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325601480312500" remote="129325601480000000" />
+<file name="Copy of onsiteregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325631483750000" remote="129325631480000000" />
+<file name="Copy of referenceregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325664313125000" remote="129325664310000000" />
+<file name="Copy of requirementregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325683696250000" remote="129325683690000000" />
+<file name="Copy of skyperegister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325704255312500" remote="129325704250000000" />
+<file name="createuser.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006849234380298" remote="129006849230000000" />
+<file name="dealermaster.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006849389394186" remote="129006849380000000" />
+<file name="emailregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325640539062500" remote="129325640530000000" />
+<file name="errorregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325640683281250" remote="129325640680000000" />
+<file name="inhouseregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325641457656250" remote="129325641450000000" />
+<file name="invoicebilling.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006849928348722" remote="129006849920000000" />
+<file name="locationmaster.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006850051641018" remote="129006850050000000" />
+<file name="onsiteregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325673358593750" remote="129325673350000000" />
+<file name="osmaster.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006850244314530" remote="129006850240000000" />
+<file name="productmaster.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006850408547994" remote="129006850400000000" />
+<file name="receiptsbilling.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006850635443322" remote="129006850630000000" />
+<file name="recordauthorization.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006850725763914" remote="129006850720000000" />
+<file name="referenceregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325683090781250" remote="129325683090000000" />
+<file name="requirementregister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129325697715468750" remote="129325697710000000" />
+<file name="skyperegister.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129326283769687500" remote="129326283760000000" />
+<file name="supportunits.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006851300502906" remote="129006851300000000" />
+<file name="versionmaster.php" server="C:/xampp/htdocs/Saralimax-SSM/" local="129006851420044866" remote="129006851420000000" />
+<file name="callregister.php" server="D:/websites/SaraliMax-SSM/" local="129488748955937500" remote="129488748950000000" />
+<file name="attendancereport.php" server="D:/websites/SaraliMax-SSM/" local="129006848953105098" remote="129006848950000000" />
+<file name="categories.php" server="D:/websites/SaraliMax-SSM/" local="129006849112963170" remote="129006849110000000" />
+<file name="Copy of callregister.php" server="D:/websites/SaraliMax-SSM/" local="129323034966718750" remote="129323034960000000" />
+<file name="Copy of emailregister.php" server="D:/websites/SaraliMax-SSM/" local="129325489812812500" remote="129325489810000000" />
+<file name="Copy of errorregister.php" server="D:/websites/SaraliMax-SSM/" local="129325571071875000" remote="129325571070000000" />
+<file name="Copy of inhouseregister.php" server="D:/websites/SaraliMax-SSM/" local="129325601480312500" remote="129325601480000000" />
+<file name="Copy of onsiteregister.php" server="D:/websites/SaraliMax-SSM/" local="129325631483750000" remote="129325631480000000" />
+<file name="Copy of referenceregister.php" server="D:/websites/SaraliMax-SSM/" local="129325664313125000" remote="129325664310000000" />
+<file name="Copy of requirementregister.php" server="D:/websites/SaraliMax-SSM/" local="129325683696250000" remote="129325683690000000" />
+<file name="Copy of skyperegister.php" server="D:/websites/SaraliMax-SSM/" local="129325704255312500" remote="129325704250000000" />
+<file name="createuser.php" server="D:/websites/SaraliMax-SSM/" local="129006849234380298" remote="129006849230000000" />
+<file name="dealermaster.php" server="D:/websites/SaraliMax-SSM/" local="129006849389394186" remote="129006849380000000" />
+<file name="emailregister.php" server="D:/websites/SaraliMax-SSM/" local="129488749626875000" remote="129488749620000000" />
+<file name="errorregister.php" server="D:/websites/SaraliMax-SSM/" local="129488750609062500" remote="129488750600000000" />
+<file name="inhouseregister.php" server="D:/websites/SaraliMax-SSM/" local="129488751852968750" remote="129488751850000000" />
+<file name="invoicebilling.php" server="D:/websites/SaraliMax-SSM/" local="129006849928348722" remote="129006849920000000" />
+<file name="locationmaster.php" server="D:/websites/SaraliMax-SSM/" local="129006850051641018" remote="129006850050000000" />
+<file name="onsiteregister.php" server="D:/websites/SaraliMax-SSM/" local="129488753643750000" remote="129488753640000000" />
+<file name="osmaster.php" server="D:/websites/SaraliMax-SSM/" local="129006850244314530" remote="129006850240000000" />
+<file name="productmaster.php" server="D:/websites/SaraliMax-SSM/" local="129006850408547994" remote="129006850400000000" />
+<file name="receiptsbilling.php" server="D:/websites/SaraliMax-SSM/" local="129006850635443322" remote="129006850630000000" />
+<file name="recordauthorization.php" server="D:/websites/SaraliMax-SSM/" local="129006850725763914" remote="129006850720000000" />
+<file name="referenceregister.php" server="D:/websites/SaraliMax-SSM/" local="129488754678593750" remote="129488754670000000" />
+<file name="requirementregister.php" server="D:/websites/SaraliMax-SSM/" local="129488755527500000" remote="129488755520000000" />
+<file name="skyperegister.php" server="D:/websites/SaraliMax-SSM/" local="129488756341250000" remote="129488756340000000" />
+<file name="supportunits.php" server="D:/websites/SaraliMax-SSM/" local="129006851300502906" remote="129006851300000000" />
+<file name="versionmaster.php" server="D:/websites/SaraliMax-SSM/" local="129006851420044866" remote="129006851420000000" />
+<file name="attendancereport.php" server="213.175.192.220//support/" local="129006848953105098" remote="129763377000000000" />
+<file name="callregister.php" server="213.175.192.220//support/" local="129488748955937500" remote="129763377000000000" />
+<file name="categories.php" server="213.175.192.220//support/" local="129006849112963170" remote="129763377000000000" />
+<file name="Copy of callregister.php" server="213.175.192.220//support/" local="129323034966718750" remote="129763377000000000" />
+<file name="Copy of emailregister.php" server="213.175.192.220//support/" local="129325489812812500" remote="129763377000000000" />
+<file name="Copy of errorregister.php" server="213.175.192.220//support/" local="129325571071875000" remote="129763377000000000" />
+<file name="Copy of inhouseregister.php" server="213.175.192.220//support/" local="129325601480312500" remote="129763377000000000" />
+<file name="Copy of onsiteregister.php" server="213.175.192.220//support/" local="129325631483750000" remote="129763377000000000" />
+<file name="Copy of referenceregister.php" server="213.175.192.220//support/" local="129325664313125000" remote="129763377000000000" />
+<file name="Copy of requirementregister.php" server="213.175.192.220//support/" local="129325683696250000" remote="129763377000000000" />
+<file name="Copy of skyperegister.php" server="213.175.192.220//support/" local="129325704255312500" remote="129763377600000000" />
+<file name="createuser.php" server="213.175.192.220//support/" local="129006849234380298" remote="129763377600000000" />
+<file name="dealermaster.php" server="213.175.192.220//support/" local="129006849389394186" remote="129763377600000000" />
+<file name="emailregister.php" server="213.175.192.220//support/" local="129488749626875000" remote="129763377600000000" />
+<file name="errorregister.php" server="213.175.192.220//support/" local="129488750609062500" remote="129763377600000000" />
+<file name="inhouseregister.php" server="213.175.192.220//support/" local="129488751852968750" remote="129763377600000000" />
+<file name="invoicebilling.php" server="213.175.192.220//support/" local="129006849928348722" remote="129763377600000000" />
+<file name="locationmaster.php" server="213.175.192.220//support/" local="129006850051641018" remote="129763377600000000" />
+<file name="onsiteregister.php" server="213.175.192.220//support/" local="129488753643750000" remote="129763377600000000" />
+<file name="osmaster.php" server="213.175.192.220//support/" local="129006850244314530" remote="129763377600000000" />
+<file name="productmaster.php" server="213.175.192.220//support/" local="129006850408547994" remote="129763377600000000" />
+<file name="receiptsbilling.php" server="213.175.192.220//support/" local="129006850635443322" remote="129763377600000000" />
+<file name="recordauthorization.php" server="213.175.192.220//support/" local="129006850725763914" remote="129763377600000000" />
+<file name="referenceregister.php" server="213.175.192.220//support/" local="129488754678593750" remote="129763377600000000" />
+<file name="requirementregister.php" server="213.175.192.220//support/" local="129488755527500000" remote="129763377600000000" />
+<file name="skyperegister.php" server="213.175.192.220//support/" local="129488756341250000" remote="129763377600000000" />
+<file name="supportunits.php" server="213.175.192.220//support/" local="129006851300502906" remote="129763377600000000" />
+<file name="versionmaster.php" server="213.175.192.220//support/" local="129006851420044866" remote="129763377600000000" />
+</dwsync>

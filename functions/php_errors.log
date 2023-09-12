@@ -1,0 +1,3 @@
+[09-Sep-2015 10:00:20 Asia/Calcutta] PHP Warning:  mysql_connect(): Can't connect to MySQL server on '213.175.192.220' (4) in /home/manju/public/imax.relyonsoft.net/public/support/functions/phpfunctions.php on line 18
+[09-Sep-2015 10:00:20 Asia/Calcutta] PHP Warning:  mysql_connect(): Can't connect to MySQL server on '213.175.192.220' (4) in /home/manju/public/imax.relyonsoft.net/public/support/functions/phpfunctions.php on line 18
+[09-Sep-2015 10:00:59 Asia/Calcutta] PHP Warning:  mysql_connect(): Lost connection to MySQL server at 'reading authorization packet', system error: 104 in /home/manju/public/imax.relyonsoft.net/public/support/functions/phpfunctions.php on line 18

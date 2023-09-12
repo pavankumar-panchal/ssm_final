@@ -1,0 +1,113 @@
+<html>
+<head><TITLE>json Example</TITLE>
+<script src="json2.js"></script>
+<script>
+var JSONstring = 
+{
+    "firstname": "Nithya", 
+	"email": "nithya.p@relyonsoft.com",
+	"hobby": 
+    [
+		{
+			"hobbyName": "sport", 
+            "isHobby": "true"
+		},
+        {
+			"hobbyName": "reading", 
+	        "isHobby": "true"
+		},
+        {
+			"hobbyName": "music", 
+	        "isHobby": "true"
+		}
+    ]
+};
+
+function getHTTPObject()
+{
+	var xhr = false;
+	if (window.XMLHttpRequest)
+	{
+		xhr = new XMLHttpRequest();
+	} else if (window.ActiveXObject) {
+		try
+		{
+			xhr = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch(e)
+		{
+			try
+			{
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch(e)
+			{
+				xhr = false;
+			}
+		}
+	}
+	return xhr;
+}
+var request;
+
+function validate()
+{
+	var p = document.forms['personal'];
+	
+	var JSONObject = new Object;
+	JSONObject.firstname = p['firstname'].value;
+	JSONObject.email = p['email'].value;
+	JSONObject.hobby = new Array;
+	
+	for(var i=0; i<3; i++)
+	{
+        JSONObject.hobby[i] = new Object;
+	    JSONObject.hobby[i].hobbyName = p['hobby'][i].value;
+		JSONObject.hobby[i].isHobby = p['hobby'][i].checked;
+	}
+	
+	JSONstring = JSON.stringify(JSONObject);
+	
+	// function returns "AJAX" object, depending on web browser
+	// this is not native JS function!
+	request = getHTTPObject();
+	request.onreadystatechange = sendData;
+	request.open("GET", "parser.php?json="+JSONstring, true);
+	request.send(null);
+}
+
+// function is executed when var request state changes
+function sendData()
+{
+	// if request object received response
+	if(request.readyState == 4)
+	{
+		// parser.php response
+		var JSONtext = request.responseText;
+		// convert received string to JavaScript object
+		var JSONobject = JSON.parse(JSONtext);
+		
+		// notice how variables are used
+		var msg = "Number of errors: "+JSONobject.errorsNum+
+				"\n- "+JSONobject.error[0]+
+				"\n- "+JSONobject.error[1];
+		
+		alert(msg);
+	}
+
+}
+</script>
+
+</head>
+<body>
+<form name="personal" action="" method="POST">
+Name <input type="text" name="firstname"><br>
+Email <input type="text" name="email"><br>
+Hobby 
+	<input type="checkbox" name="hobby" value="sport"> Sport
+	<input type="checkbox" name="hobby" value="reading"> Reading
+	<input type="checkbox" name="hobby" value="music"> Music
+<input type="button" name="valid" value="Validate" onClick="validate()">
+</form>
+</body>
+</html>

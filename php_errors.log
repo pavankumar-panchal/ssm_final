@@ -1,0 +1,2 @@
+[23-Jan-2014 09:30:21 Asia/Calcutta] PHP Warning:  mysqli_connect(): Can't connect to MySQL server on '192.168.170.169' (111) in /home/manju/public/imax.relyonsoft.net/public/support/functions/phpfunctions.php on line 16
+[23-Jan-2014 09:32:10 Asia/Calcutta] PHP Warning:  mysqli_connect(): Can't connect to MySQL server on '192.168.170.169' (113) in /home/manju/public/imax.relyonsoft.net/public/support/functions/phpfunctions.php on line 16
