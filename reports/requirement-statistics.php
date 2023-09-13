@@ -1,156 +1,169 @@
-<link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand());?>">
-<script language="javascript" src="../functions/requirement-statistics.js?dummy = <?php echo (rand());?>" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
+<script language="javascript" src="../functions/bug-statistics.js?dummy = <?php echo (rand()); ?>"
+  type="text/javascript"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <div id="contentdiv" style="display:block;">
-<table width="100%" border="0" cellspacing="0" cellpadding="4">
-  <tr>
-    <td class="content-header">Reports > Requirement Statistics</td>
-  </tr>
-  <tr>
-    <td></td>
-  </tr>
-  <tr>
-    <td style="padding:0"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #6393df; border-top:none;">
-      <tr style="cursor:pointer" onClick="showhide('maindiv','toggleimg');">
-        <td class="header-line" style="padding:0">&nbsp;&nbsp;Enter the Details</td>
-        <td align="right" class="header-line" style="padding-right:7px"><div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"  align="absmiddle" /></div></td>
+
+
+
+  <div class="container mt-4 p-4 rounded-4">
+    <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+      <div class="card-header form-title" onclick="toggleFormVisibility();">
+        Enter the Details <span id="toggleimg" class="float-end pointer-event">+</span>
+      </div>
+      <div class="card-body main-form" id="maindiv" style="display: block;">
+        <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
+          <!-- Rest of the form content goes here -->
+          <div class="row">
+            <div class="col-md-6">
+              <!-- First column content -->
+              <div class="mb-3">
+                <label for="fromdate" class="form-label">From Date:</label>
+                <input name="fromdate" type="date" class="form-control " id="DPC_fromdate" size="30" autocomplete="off"
+                  value="" maxlength="10" isdatepicker="true">
+              </div>
+              <div class="mb-3">
+                <label for="todate" class="form-label">To Date:</label>
+                <input name="todate" type="date" class="form-control" id="DPC_todate" size="30" autocomplete="off"
+                  value="<?php datetimelocal('d-m-Y'); ?>" datepicker_format="DD-MM-YYYY" maxlength="10"
+                  isdatepicker="true">
+              </div>
+              <div class="mb-3">
+                <label for="productgroup" class="form-label">Product group:</label>
+                <span name="productgroup" id="filterprdgroupdisplay" class="">
+                  <?php include('../inc/productgroup.php');
+                  productname('s_productgroup', 'color');
+                  ?>
+                  <!-- Other options -->
+                </span>
+              </div>
+              <div class="mb-3">
+                <label for="productname" class="form-label">Product Name:</label>
+                <select name="productname" id="productname" class="form-control form-select">
+                  <option value="">Make A Selection</option>
+                  <?php include('../inc/productfilter.php'); ?>
+                  <!-- Other options -->
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="errordescription" class="form-label">Requiremen Description:</label>
+                <input name="errorreported" type="text" class="form-control" id="errorreported" size="30"
+                  autocomplete="off" value="">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <!-- Second column content -->
+              <div class="mb-3">
+                <label for="status" class="form-label">Status:</label>
+                <select name="status" id="status" class="form-control form-select">
+                  <option value="">Make A Selection</option>
+                  <option value="solved">Solved</option>
+                  <option value="unsolved">Un Solved</option>
+                  <!-- Other options -->
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="enteredby" class="form-label">Entered By:</label>
+                <select name="userid" id="userid" class="form-control  form-select">
+                  <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
+                    <option value="">ALL</option>
+                    <?php include('../inc/useridselectionreports.php');
+                  } else { ?>
+                    <?php include('../inc/useridselectionreports.php');
+                  } ?>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="reportedto" class="form-label">Reported To:</label>
+                <input name="reportedto" type="text" class="form-control" id="reportedto" size="30" autocomplete="off"
+                  value="">
+              </div>
+              <div class="mb-3">
+                <label for="reportedby" class="form-label">Reported by:</label>
+                <input name="customername" type="text" class="form-control" id="customername" size="30"
+                  autocomplete="off" value="">
+              </div>
+            </div>
+          </div>
+          <div class="text-end submit-btn">
+            <div class="form-group">
+              <div id="form-error"></div>
+            </div>
+            <button name="view" type="submit" class="btn btn-primary" id="view" onclick="formsubmit();">View</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4">
+    <div class="row">
+      <div class="col-12">
+        <div class="card rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
+          <div class="card-header ">
+            View Records:
+          </div>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-9">
+                <span id="tabgroupgridwb1"></span>
+                <span id="tabgroupgridwb2"></span>
+                <span id="tabgroupgridwb3"></span>
+                <span id="tabgroupgridwb4"></span>
+              </div>
+              <div class="col-3 text-right">
+                <!-- Add content here if needed -->
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-12 text-center">
+                <form name="gridformbug" id="gridformbug" action="../reports-excel/bug-report.php" method="post">
+                  <div id="tabgroupgridc1" class="overflow-auto" style="height: 300px;">
+                    <!-- Add your content here -->
+                  </div>
+                  <div id="tabgroupgridc2" style="display: block; padding-right: 15px; border-top: 1px solid #d1dceb;">
+                    <div class="row">
+                      <div class="col-8"></div>
+                      <div class="col-4 text-right">
+                        <input name="toexcel" type="submit" class="btn btn-warning" id="toexcel" value="To Excel" />
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="nameloaddiv" style="display:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="4">
+      <tr>
+        <td class="content-header">Call Register > Get Customer</td>
       </tr>
       <tr>
-        <td colspan="2" valign="top"><div id="maindiv">
-          <form action="" method="post" name="submitform" id="submitform" onSubmit="return false;">
-            <table width="100%" border="0" cellspacing="0" cellpadding="2">
-              <tr>
-                <td valign="top" style="border-right:1px solid #d1dceb;"><table width="100%" border="0" cellspacing="0" cellpadding="3">
-                    <tr bgcolor="#f7faff">
-                      <td valign="top">From Date:</td>
-                      <td valign="top"><input name="fromdate" type="text" class="swifttext" id="DPC_fromdate" size="30" autocomplete="off"  style="background:#FEFFE6;" value="<?php datetimelocal('d-m-Y'); ?>" />
-                        <input type="hidden" id="hiddenlastslno" name="hiddenlastslno" value=""  /></td>
-                    </tr>
-                    <tr bgcolor="#edf4ff">
-                      <td valign="top">To Date:</td>
-                      <td valign="top"><input name="todate" type="text" class="swifttext" id="DPC_todate" size="30" autocomplete="off"   style="background:#FEFFE6;" value="<?php datetimelocal('d-m-Y'); ?>" /></td>
-                    </tr>
-                    <tr bgcolor="#f7faff">
-                      <td valign="top" bgcolor="#EDF4FF">Product group:</td>
-                      <td valign="top" bgcolor="#EDF4FF">
-                        <span id="filterprdgroupdisplay">
-                      <!-- Details are in javascript.js page as a function prdgroup();-->
-						<?php include('../inc/productgroup.php');  
-							productname('s_productgroup','color');
-                        ?>
-                       </span>
-                       </td>
-                    </tr>
-                    <tr bgcolor="#f7faff">
-                      <td valign="top">Product Name:</td>
-                      <td valign="top"><select name="productname" id="productname" class="swiftselect"  style="background:#FEFFE6;">
-                        <option value="">Make A Selection</option>
-                         <?php include('../inc/productfilter.php'); ?>
-                      </select></td>
-                    </tr>
-                    <tr bgcolor="#edf4ff">
-                      <td valign="top">Requirement Description:</td>
-                      <td valign="top"><input name="requirement" type="text" class="swifttext" id="requirement" size="30" autocomplete="off" /></td>
-                    </tr>
-
-                </table></td>
-                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="3">
-                    <tr bgcolor="#f7faff">
-                      <td valign="top">Status:</td>
-                      <td valign="top"><select name="status" id="status" class="swiftselect">
-                        <option value="">Make A Selection</option>
-                        <option value="solved">Solved</option>
-                        <option value="unsolved">Un Solved</option>
-                      </select></td>
-                    </tr>
-                    <tr bgcolor="#edf4ff">
-                      <td valign="top">Entered By:</td>
-                      <td valign="top"><select name="userid" id="userid" class="swiftselect">
-                        <?php if($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') 
-						{ ?>
-                        <option value="">ALL</option>
-                        <?php include('../inc/useridselectionreports.php'); } else { ?>
-                        <?php  include('../inc/useridselectionreports.php'); } ?>
-                      </select></td>
-                    </tr>
-                    <tr bgcolor="#f7faff">
-                      <td valign="top">Reported To:</td>
-                      <td valign="top"><input name="reportedto" type="text" class="swifttext" id="reportedto" size="30" autocomplete="off" /></td>
-                    </tr>
-                    <tr bgcolor="#edf4ff">
-                      <td valign="top">Reported By:</td>
-                      <td valign="top"><input name="customername" type="text" class="swifttext" id="customername" size="30" autocomplete="off" /></td>
-                    </tr>
-
-                </table></td>
-              </tr>
-              <tr>
-                <td valign="top">&nbsp;</td>
-                <td valign="top">&nbsp;</td>
-              </tr>
-              
-              <tr>
-                <td colspan="2" align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;"><table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
-  <tr>
-                <td width="68%" height="35" align="left" valign="middle"><div id="form-error"></div></td>
-                <td width="32%" height="35" align="right" valign="middle"><input name="view" type="submit" class="swiftchoicebutton" id="view" value="View" onClick="formsubmit();" /></td>
-  </tr>
-</table></td>
-              </tr>
-            </table>
-          </form>
-        </div></td>
+        <td>
+          <div id="gc-form-error"></div>
+        </td>
       </tr>
-
-    </table></td>
-  </tr>
-  <tr>
-    <td style="padding:0">&nbsp;</td>
-  </tr>
-  <tr>
-    <td style="padding:0"><table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #6393df; border-top:none;">
+      <?php include('../inc/nameload.php'); ?>
+    </table>
+  </div>
+  <div id="questionload" style="display:none;">
+    <table width="100%" border="0" cellspacing="0" cellpadding="4">
       <tr>
-        <td width="10%" class="header-line" style="padding:0">&nbsp;&nbsp;View Records: </td>
-        <td width="75%" class="header-line" style="padding:0"><span id="tabgroupgridwb1"></span><span id="tabgroupgridwb2"></span><span id="tabgroupgridwb3"></span><span id="tabgroupgridwb4"></span></td>
-        <td width="15%" class="header-line" style="padding:0"></td>
+        <td class="content-header">Bug Statistics > Get Problems and Solutions</td>
       </tr>
       <tr>
-        <td colspan="3" align="center" valign="top"><form name="gridformbug" id="gridformbug" action="../reports-excel/requirement-report.php" method="post"><div id="tabgroupgridc1" style="overflow:auto; height:300px; width:1060PX; padding:2px;" align="center"></div>
-            <div id="tabgroupgridc2" style="display:block;padding-right:15px; border-top:1px solid #d1dceb;">
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
-                <tr>
-                  <td width="68%" height="35" align="left" valign="middle"></td>
-                  <td width="32%" height="35" align="right" valign="middle"><input name="toexcel" type="submit" class="swiftchoicebutton-orange" id="toexcel" value="To Excel"/></td></tr>
-              </table>
-            </div></form>
-          </td>
+        <td>
+          <div id="gq-form-error"></div>
+        </td>
       </tr>
-    </table></td>
-  </tr>
-</table>
-</div>
-
-
-<div id="nameloaddiv" style="display:none;">
-<table width="100%" border="0" cellspacing="0" cellpadding="4">
-  <tr>
-    <td class="content-header">Call Register > Get Customer</td>
-  </tr>
-  <tr>
-    <td><div id="gc-form-error"></div></td>
-  </tr>
-  <?php include('../inc/nameload.php'); ?>
-</table>
-</div>
-
-
-<div id="questionload" style="display:none;">
-<table width="100%" border="0" cellspacing="0" cellpadding="4">
-  <tr>
-    <td class="content-header">Bug Statistics > Get Problems and Solutions</td>
-  </tr>
-  <tr>
-    <td><div id="gq-form-error"></div></td>
-  </tr>
-  <?php include('../inc/questionload.php'); ?>
-</table>
-</div>
+      <?php include('../inc/questionload.php'); ?>
+    </table>
+  </div>
