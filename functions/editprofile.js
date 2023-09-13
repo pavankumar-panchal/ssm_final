@@ -18,10 +18,10 @@ function formsubmit(command, action) {
 	if (isNaN(field.value)) { error.innerHTML = errormessage('Contact Number should contain only integers.'); field.focus(); return false; }
 	var field = form.emergencyremarks;
 	if (!field.value) { error.innerHTML = errormessage('Enter the details of the person whom to be Contacted in case of Emergency.'); field.focus(); return false; }
-	// var field = form.dob;
-	// if (!field.value) { error.innerHTML = errormessage('Enter the Date of Birth.'); field.focus(); return false; }
-	// var field = form.doj;
-	// if (!field.value) { error.innerHTML = errormessage('Enter the Date of Joining.'); field.focus(); return false; }
+	var field = form.dob;
+	if (!field.value) { error.innerHTML = errormessage('Enter the Date of Birth.'); field.focus(); return false; }
+	var field = form.doj;
+	if (!field.value) { error.innerHTML = errormessage('Enter the Date of Joining.'); field.focus(); return false; }
 	var field = form.personalemail;
 	if (!field.value) { error.innerHTML = errormessage('Enter the Personal Email ID.'); field.focus(); return false; }
 	if (field.value) { var a = checkemail(field.value); if (a == false) { error.innerHTML = errormessage('Enter the correct Personal Email ID.'); field.focus(); return false; } }
