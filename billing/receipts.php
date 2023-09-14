@@ -9,15 +9,8 @@ else {
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
-
-
-
   <div id="contentdiv" style="display:block;">
-
-
-
-
-
+  
     <div class="container mt-5">
       <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
         <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
@@ -32,7 +25,7 @@ else {
                 <input name="customername" type="text" class="form-control" id="customername" autocomplete="off">
                 <a href="javascript:void(0);"
                   onClick="getinvoiceregister(); getcustomerfunc();registernameload('receipt')" style="cursor:pointer">
-                   select here</a>
+                  select here</a>
                 <input type="hidden" name="lastslno" id="lastslno" value="" />
                 <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
                 <input type="hidden" name="loggedusertype" id="loggedusertype" value="<?php echo ($usertype); ?>" />

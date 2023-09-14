@@ -67,6 +67,8 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
 
 
   <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <script>
     google.charts.load('current', { packages: ['annotatedtimeline'] });
     google.charts.setOnLoadCallback(gettimelinedata);
@@ -255,21 +257,36 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                         </tr>
                         <tr>
                           <td style="padding:0">
+
+
+
+
                             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                               <tr>
                                 <td valign="top">
+
+
+
                                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                     <tr>
                                       <td width="81%" valign="top">
+
+
+
+
                                         <table class="dashborder" width="100%" border="0" cellpadding="4" cellspacing="0">
                                           <tbody>
                                             <tr>
                                               <td valign="top" align="left">
+
+
                                                 <table class="dashcontent" width="100%" border="0" cellpadding="2"
                                                   cellspacing="0">
                                                   <tbody>
                                                     <tr>
                                                       <td valign="top" align="left">
+
+
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0"
                                                           style="border:1px solid #F09E0A; border-top:none;">
                                                           <tr style="cursor:pointer"
@@ -310,6 +327,9 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                             </td>
                                                           </tr>
                                                         </table>
+
+
+
                                                       </td>
                                                     </tr>
                                                     <?php if ($usertype <> 'GUEST') { ?>
@@ -318,6 +338,11 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                       </tr>
                                                       <tr valign="top">
                                                         <td align="left" style="padding:4px">
+
+
+
+
+
                                                           <table width="100%" border="0" cellspacing="0" cellpadding="0"
                                                             style="border:1px solid #F09E0A; border-top:none;">
                                                             <tr style="cursor:pointer"
@@ -347,6 +372,11 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                               </td>
                                                             </tr>
                                                           </table>
+
+
+
+
+
                                                         </td>
                                                       </tr>
                                                     <?php } ?>
@@ -355,6 +385,11 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                     </tr>
                                                     <tr valign="top">
                                                       <td align="left">
+
+
+
+
+
                                                         <table width="100%" border="0" cellspacing="0" cellpadding="0"
                                                           style="border:1px solid #F09E0A; border-top:none;">
                                                           <tr style="cursor:pointer"
@@ -384,6 +419,10 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                             </td>
                                                           </tr>
                                                         </table>
+
+
+
+
                                                       </td>
                                                     </tr>
                                                     <tr>
@@ -391,108 +430,61 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                                                     </tr>
                                                     <tr>
                                                       <td align="left" valign="top" style="padding:4px;">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="0"
-                                                          style="border:1px solid #F09E0A; border-top:none;">
-                                                          <tr style="cursor:pointer"
-                                                            onclick="showhide('dash_loginsummary','toggleimg');">
-                                                            <td class="header-line-dash" style="padding:0">
-                                                              &nbsp;<strong>&nbsp;Login Summary</strong></td>
-                                                            <td align="right" class="header-line-dash"
-                                                              style="padding-right:7px">
-                                                              <div align="right"><img src="../images/minus.jpg" border="0"
-                                                                  id="toggleimg" name="toggleimg" align="absmiddle" />
+
+
+
+
+
+
+
+
+                                                        <div class="container mt-5">
+                                                          <div class="row">
+                                                            <div class="col-md-12">
+                                                              <div class="card">
+                                                                <div class="card-header">
+                                                                  <h5>Login Summary</h5>
+                                                                </div>
+                                                                <div class="card-body">
+                                                              
+                                                                  <div id="dash_loginsummary">
+                                                                    <div class="table-responsive">
+                                                                      <table class="table">
+                                                                        <tr>
+                                                                          <td><strong>Today -
+                                                                              <?php echo (date("F j, Y", mktime(0, 0, 0, date('n')))); ?>
+                                                                            </strong></td>
+                                                                          <td><strong>Last Working Day -
+                                                                              <?php echo (date("d-m-Y", strtotime($ydateresult))); ?>
+                                                                            </strong></td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                          <td>In Time:
+                                                                            <?php echo ($tintimeresult); ?>
+                                                                          </td>
+                                                                          <td>In Time:
+                                                                            <?php echo ($yintimeresult); ?> | Out Time:
+                                                                            <?php echo ($youttimeresult); ?>
+                                                                          </td>
+                                                                        </tr>
+                                                                      </table>
+                                                                    </div>
+                                                                  </div>
+                                                                </div>
                                                               </div>
-                                                            </td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td colspan="2">
-                                                              <div id="dash_loginsummary" style="display:none;">
-                                                                <table width="100%" border="0" cellspacing="0"
-                                                                  cellpadding="3">
-                                                                  <tr>
-                                                                    <td><strong>Today -
-                                                                        <?php echo (date("F j, Y", mktime(0, 0, 0, date('n')))); ?>
-                                                                      </strong></td>
-                                                                    <td><strong>Last Working Day -
-                                                                        <?php echo (date("d-m-Y", strtotime($ydateresult))); ?>
-                                                                      </strong></td>
-                                                                  </tr>
-                                                                  <tr>
-                                                                    <td>In Time:
-                                                                      <?php echo ($tintimeresult); ?>
-                                                                    </td>
-                                                                    <td>In Time:
-                                                                      <?php echo ($yintimeresult); ?> | Out Time:
-                                                                      <?php echo ($youttimeresult); ?>
-                                                                    </td>
-                                                                  </tr>
-                                                                </table>
-                                                              </div>
-                                                            </td>
-                                                          </tr>
-                                                        </table>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+
+
+
+
+
                                                       </td>
                                                     </tr>
 
                                                     <tr>
                                                       <td valign="top" align="left">&nbsp;</td>
-                                                    </tr>
-                                                  </tbody>
-                                                </table>
-                                              </td>
-                                            </tr>
-                                          </tbody>
-                                        </table>
-                                      </td>
-                                      <td width="1%" valign="top">&nbsp;</td>
-                                      <td width="18%" valign="top">
-                                        <table class="dashborder" width="100%" border="0" cellpadding="4" cellspacing="0">
-                                          <tbody>
-                                            <tr style="height: 1em;">
-                                              <td valign="top" align="left">
-                                                <table class="dashcontent" width="100%" border="0" cellpadding="2"
-                                                  cellspacing="0" height="300">
-                                                  <tbody>
-                                                    <tr>
-                                                      <td valign="top" align="left">
-                                                        <table width="100%" border="0" cellspacing="0" cellpadding="4">
-                                                          <tr>
-                                                            <td><strong>About:</strong></td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>
-                                                              <table width="100%" border="0" cellpadding="3"
-                                                                cellspacing="0">
-                                                                <tbody>
-                                                                  <tr class="smalltext">
-                                                                    <td width="75" nowrap="nowrap">Product:</td>
-                                                                    <td>Saral SSM</td>
-                                                                  </tr>
-                                                                  <tr class="smalltext">
-                                                                    <td nowrap="nowrap">Version: </td>
-                                                                    <td>2.00</td>
-                                                                  </tr>
-                                                                </tbody>
-                                                              </table>
-                                                            </td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td style="padding:0;">&nbsp;</td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td><strong>Members, who have/had logged in today:</strong>
-                                                            </td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>
-                                                              <?php echo ($membergrid); ?>
-                                                            </td>
-                                                          </tr>
-                                                          <tr>
-                                                            <td>&nbsp;</td>
-                                                          </tr>
-                                                        </table>
-                                                      </td>
                                                     </tr>
                                                   </tbody>
                                                 </table>
