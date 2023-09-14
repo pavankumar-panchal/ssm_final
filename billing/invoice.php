@@ -37,7 +37,8 @@ else {
                     isdatepicker="true">
                   <span id="getcustomerlink" style="visibility:visible;"> <a href="javascript:void(0);"
                       onClick="getregisterdata(); getcustomerfunc();registernameload('invoice');" style="cursor:pointer">
-                      <img src="../images/userid-bg.gif" width="14" height="16" border="0" align="absmiddle" /></a></span>
+                      select here
+                    </a></span>
                   <input type="hidden" name="lastslno" id="lastslno" value="" />
                   <input type="hidden" name="cusid" id="cusid" value="" />
                   <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
