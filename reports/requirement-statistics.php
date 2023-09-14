@@ -5,8 +5,6 @@
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <div id="contentdiv" style="display:block;">
 
-
-
   <div class="container mt-4 p-4 rounded-4">
     <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
       <div class="card-header form-title" onclick="toggleFormVisibility();">
