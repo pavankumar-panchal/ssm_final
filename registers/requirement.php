@@ -10,6 +10,8 @@ else {
 <link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
 <script language="javascript" src="../functions/requirementregister.js?dummy = <?php echo (rand()); ?>"
   type="text/javascript"></script>
+
+
 <div class="container mt-5">
   <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
     <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
