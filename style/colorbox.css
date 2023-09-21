@@ -1,0 +1,166 @@
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/*
+    ColorBox Core Style
+    The following rules are the styles that are consistent between themes.
+    Avoid changing this area to maintain compatibility with future versions of ColorBox.
+*/
+#colorbox,
+#cboxOverlay,
+#cboxWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+#cboxOverlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.7); /* Updated the background to use RGBA for better transparency */
+}
+
+#cboxMiddleLeft,
+#cboxBottomLeft {
+    clear: left;
+}
+
+#cboxContent {
+    position: relative;
+    overflow: hidden;
+    background: #fff; /* Updated the background color for content */
+    padding: 20px; /* Added padding for content */
+    border-radius: 5px; /* Added rounded corners for content */
+}
+
+#cboxLoadedContent {
+    overflow: hidden;
+}
+
+#cboxLoadedContent iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#cboxTitle {
+    margin: 0;
+    position: absolute;
+    top: -30px; /* Adjusted the title position */
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #CC6600;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Updated the loading overlay background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cboxLoadingGraphic {
+    background: none; /* Removed the background for the loading graphic */
+    width: 43px;
+    height: 11px;
+}
+
+#cboxClose {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: url(../images/controls.png) no-repeat -25px 0px;
+    width: 25px;
+    height: 25px;
+    text-indent: -9999px;
+}
+
+/* Updated the style for the previous, next, and slideshow buttons */
+#cboxPrevious,
+#cboxNext,
+#cboxSlideshow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+    background: url(../images/controls.png) no-repeat; /* Adjust these styles as needed */
+    cursor: pointer;
+}
+
+/* 
+    Example user style
+    The following rules are ordered and tabbed in a way that represents the
+    order/nesting of the generated HTML, so that the structure is easier to understand.
+*/
+#cboxOverlay {
+    background: url(../images/overlay.png) repeat 0 0;
+}
+
+/* Define the background image for each individual element */
+.cboxIE #cboxTopLeft,
+.cboxIE #cboxTopCenter,
+.cboxIE #cboxTopRight,
+.cboxIE #cboxBottomLeft,
+.cboxIE #cboxBottomCenter,
+.cboxIE #cboxBottomRight,
+.cboxIE #cboxMiddleLeft,
+.cboxIE #cboxMiddleRight {
+    background: transparent;
+}
+
+.cboxIE #cboxTopLeft {
+    background-image: url('../images/internet_explorer/borderTopLeft.png');
+    background-position: top left;
+}
+
+.cboxIE #cboxTopCenter {
+    background-image: url('../images/internet_explorer/borderTopCenter.png');
+    background-position: top center;
+}
+
+.cboxIE #cboxTopRight {
+    background-image: url('../images/internet_explorer/borderTopRight.png');
+    background-position: top right;
+}
+
+.cboxIE #cboxBottomLeft {
+    background-image: url('../images/internet_explorer/borderBottomLeft.png');
+    background-position: bottom left;
+}
+
+.cboxIE #cboxBottomCenter {
+    background-image: url('../images/internet_explorer/borderBottomCenter.png');
+    background-position: bottom center;
+}
+
+.cboxIE #cboxBottomRight {
+    background-image: url('../images/internet_explorer/borderBottomRight.png');
+    background-position: bottom right;
+}
+
+.cboxIE #cboxMiddleLeft {
+    background-image: url('../images/internet_explorer/borderMiddleLeft.png');
+    background-position: center left;
+}
+
+.cboxIE #cboxMiddleRight {
+    background-image: url('../images/internet_explorer/borderMiddleRight.png');
+    background-position: center right;
+}

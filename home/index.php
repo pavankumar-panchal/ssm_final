@@ -61,7 +61,9 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
     <?php $pagetilte = getpagetitle($_GET['a_link']);
     echo ($pagetilte); ?>
   </title>
-  <?php include('../inc/stylesnscripts.php'); ?>
+  <?php 
+  include('../inc/stylesnscripts.php');
+  ?>
 
 
   <script src="https://www.gstatic.com/charts/loader.js"></script>
@@ -77,7 +79,9 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
 <body marginheight="0" marginwidth="0" onload="bodyonload();">
 
 
-  <?php include('../inc/navigation.php'); ?>
+  <?php 
+  include('../inc/navigation.php'); 
+  ?>
 
   <?php if ($usertype == 'TEAMLEADER' || $usertype == 'ADMIN' || $usertype == 'MANAGEMENT') { ?>
 

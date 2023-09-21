@@ -1,0 +1,33 @@
+.dpDiv { }
+
+.dpTable { font-size: 11px; text-align: center; color: #ffffff; background-color: #5989d5; border: 1px solid #6393df; }
+
+.dpTR { }
+
+.dpTitleTR { }
+
+.dpDayTR { }
+
+.dpTodayButtonTR { }
+
+.dpTD { border: 1px solid #ece9d8; }
+
+.dpDayHighlightTD { background-color:#FFFFCC; border: 1px solid #000000; color:red; }
+
+.dpTDHover { background-color: #FFFFCC; border: 1px solid #000000; cursor: pointer; color: red; }
+
+.dpTitleTD { }
+
+.dpButtonTD { }
+
+.dpTodayButtonTD { }
+
+.dpDayTD { background-color: #ffffff; border: 1px solid #cccccc; color: #5989d5; }
+
+.dpTitleText { font-size: 11px; color:#FFFF99; font-weight: bold; }
+
+.dpDayHighlight { color: 4060ff; font-weight: bold; }
+
+.dpButton { font-size: 10px; color: gray; background: #d8e8ff; font-weight: bold; padding: 2px; }
+
+.dpTodayButton { font-size: 10px; color: gray; background: #d8e8ff; font-weight: bold; }
