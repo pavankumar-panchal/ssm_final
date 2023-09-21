@@ -106,47 +106,6 @@ else {
 
 
 
-  <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #6393df; border-top:none;">
-    <tr>
-      <td width="10%" class="header-line" style="padding:0">&nbsp;&nbsp;View Records: </td>
-      <td width="75%" class="header-line" style="padding:0"><span id="tabgroupgridwb1"></span></td>
-      <td width="15%" class="header-line" style="padding:0"></td>
-    </tr>
-    <tr>
-      <td colspan="3" align="center" valign="top">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td valign="bottom">
-              <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                <tr>
-                  <td><img src="../images/white-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Absent<br />
-                    <br />
-                    <img src="../images/orange-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Holiday<br />
-                    <br />
-                    <img src="../images/blue-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Present on Holiday<br />
-                    <br />
-                    <img src="../images/yellow-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Half Day<br />
-                    <br />
-                    <img src="../images/green-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Present
-                  </td>
-                </tr>
-              </table>
-            </td>
-            <td valign="top">
-              <div id="tabgroupgridc1" style="height:auto; width:900PX; padding:2px;" align="center"></div>
-            </td>
-          </tr>
-        </table>
-    </tr>
-  </table> -->
-
-
-
 
   <div class="container">
     <div class="row">
