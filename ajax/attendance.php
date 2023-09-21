@@ -54,6 +54,7 @@ if ($type == 'dattendance') {
 			$query = "SELECT username,slno FROM ssm_users WHERE type <> 'ADMIN' and existinguser = 'yes' " . $useridpiece . "
             AND (reportingauthority='" . $user . "') ";
 		} else {
+
 			$query = "SELECT username,slno FROM ssm_users WHERE type <> 'ADMIN' and existinguser = 'yes' " . $useridpiece . "
             AND slno='" . $user . "'";
 		}
