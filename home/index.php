@@ -352,3 +352,5 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
 </body>
 
 </html>
+
+<?php include("../inc/footer.php");
