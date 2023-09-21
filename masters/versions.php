@@ -64,13 +64,13 @@ else {
             <div class="col-md-6">
               <div class="form-group">
                 <label for="productversion">Product Version:</label>
-                <input name="productversion" type="text" class="form-control swifttext" id="productversion" size="30"
+                <input name="productversion" type="text" class="form-control " id="productversion" size="30"
                   isdatepicker="true">
               </div>
               <div class="form-group">
                 <label for="releasedate">Release Date:</label>
                 <div class="input-group">
-                  <input name="releasedate" type="text" class="form-control swifttext" id="DPC_releasedate" size="30"
+                  <input name="releasedate" type="text" class="form-control " id="DPC_releasedate" size="30"
                     datepicker_format="DD-MM-YYYY" maxlength="10" isdatepicker="true">
 
                 </div>

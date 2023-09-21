@@ -108,11 +108,13 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
     </tr>
   <?php } ?>
   <tr>
-    <td height="24" colspan="2" valign="top" style="border-bottom:1px solid #F0EADE"><span class="navtitle"><img
-          src="../images/doublearrowsnav.gif" align="absmiddle" border="0" />&nbsp;<strong>Reports</strong></span></td>
+    <!-- <td height="24" colspan="2" valign="top" style="border-bottom:1px solid #F0EADE"><span class="navtitle"><img
+          src="../images/doublearrowsnav.gif" align="absmiddle" border="0" />&nbsp;<strong>Reports</strong></span></td> -->
   </tr>
   <tr>
     <td colspan="2">
+
+<!--     
       <table width="100%" border="0" cellpadding="3" cellspacing="0">
         <tbody>
           <?php if ($usertype <> 'GUEST') { ?>
@@ -161,7 +163,10 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
             <td>&nbsp;</td>
           </tr>
         </tbody>
-      </table>
+      </table> -->
+
+
+
     </td>
   </tr>
 
