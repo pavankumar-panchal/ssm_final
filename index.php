@@ -220,7 +220,7 @@
   </style>
 
   <div class="footer">
-    A product of Relyon Web Management | Copyright © 2012
+    A product of Relyon Web Management | Copyright © 2023
     Relyon Softech Ltd. All rights reserved.
   </div>
   <!-- Bootstrap JS (Make sure to include jQuery and Popper.js before this) -->

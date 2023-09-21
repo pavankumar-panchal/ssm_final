@@ -105,6 +105,16 @@ $d_officialemail = $fetch['officialemail'];
       <div class="card-body ">
         <div class="row ">
           <div class="col-md-6 ">
+
+
+
+
+
+
+
+
+
+          
             <table class="table table-bordered ">
               <tbody>
                 <tr>
@@ -157,6 +167,8 @@ $d_officialemail = $fetch['officialemail'];
                 </tr>
               </tbody>
             </table>
+
+
           </div>
           <div class="col-md-6">
             <table class="table table-bordered ">
@@ -194,7 +206,7 @@ $d_officialemail = $fetch['officialemail'];
                   </td>
                 </tr>
                 <tr>
-                  <td><strong>Contact Number [In case of Emergency]:</strong></td>
+                  <td><strong>Contact Number: </strong></td>
                   <td>
                     <font color="#FF6200">
                       <?php echo ($d_emergencynumber); ?>
@@ -210,6 +222,8 @@ $d_officialemail = $fetch['officialemail'];
                   </td>
                 </tr>
               </tbody>
+
+
             </table>
           </div>
         </div>
@@ -218,19 +232,3 @@ $d_officialemail = $fetch['officialemail'];
   </div>
 
   <link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  

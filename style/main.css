@@ -6,6 +6,7 @@ body {
 	color: #666666;
 	margin-left: 0;
 	margin-top: 0;
+
 }
 
 .form-fileds {
@@ -674,9 +675,9 @@ form {
 	cursor: pointer;
 }
 
-.swiftradiobutton {
-	BORDER: solid 1px #FF6600;
-	BACKGROUND: COLOR: #000000;
+.swiftradiobutton{
+	BORDER:  1px SOLID #FF6600;
+	BACKGROUND-COLOR: #000000;
 	FONT-FAMILY: Verdana, Tahoma;
 	FONT-SIZE: 11px;
 	MARGIN: 0px;

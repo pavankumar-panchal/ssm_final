@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- Add Bootstrap CSS link here -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    
     <style>
         /* Custom CSS for footer */
-        .footer_area {
+        .custom-footer {
             background-color: #f8f8f8;
             padding: 30px 0;
             border-top: 1px solid #ddd;
@@ -60,7 +61,7 @@
 
 <body>
     <div class="container">
-        <footer class="footer_area mt-4">
+        <footer class="custom-footer mt-4">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-lg">
@@ -135,7 +136,7 @@
             </div>
         </footer>
     </div>
-    <!-- Add Bootstrap JS and jQuery scripts here -->
+    <!-- Add Bootstrap JS script link here -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

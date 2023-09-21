@@ -240,8 +240,9 @@
                 <?php echo $usertype ?>
               </a></li>
             <li class="nav-item"><a class="nav-link" href="#">
-               [ <?php echo $usertype ?>]
-                 
+                [
+                <?php echo $usertype ?>]
+
               </a></li>
           </ul>
           <ul class="header-nav ms-3">
@@ -275,21 +276,20 @@
             </li>
           </ul>
         </div>
+      
+
         <div class="header-divider p-4">
           <div class="container-fluid">
             <nav aria-label="breadcrumb">
-              <ol class="breadcrumb my-0 ms-2">
-                <li class="breadcrumb-item">
-                  <span>Home</span>
-                </li>
-                <li class="breadcrumb-item active"><span>Dashboard</span></li>
-              </ol>
+              <span class="breadcrumb-item"><a href="#">Home / Dashboard</a></span>
             </nav>
           </div>
         </div>
 
-
       <?php } ?>
+
+
+      
 
     </header>
     <div class="body flex-grow-1 px-3 bg-white">
