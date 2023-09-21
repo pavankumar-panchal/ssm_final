@@ -1,6 +1,2 @@
 User-agent: *
 Disallow: /
-
-
-
-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

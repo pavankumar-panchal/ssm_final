@@ -4,109 +4,81 @@ if ($usertype == 'GUEST')
 else {
   ?>
   <link rel="stylesheet" type="text/css" href="../style/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <!--<script language="javascript" src="../functions/invoiceregister.js" type="text/javascript"></script>
 -->
-  <div id="contentdiv" style="display:block;">
-    <table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
-        <td class="content-header">Attendance > Advanced</td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-      <tr>
-        <td style="padding:0">
-          <table width="100%" border="0" cellspacing="0" cellpadding="0"
-            style="border:1px solid #6393df; border-top:none;">
-            <tr style="cursor:pointer" onClick="showhide('maindiv','toggleimg');">
-              <td class="header-line" style="padding:0">&nbsp;&nbsp;Enter / Edit / View Details</td>
-              <td align="right" class="header-line" style="padding-right:7px">
-                <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                    align="absmiddle" /></div>
-              </td>
-            </tr>
-            <tr>
-              <td colspan="2" valign="top">
-                <div id="maindiv">
-                  <form method="post" name="submitform" id="submitform" action="../reports-excel/attendancereport.php">
-                    <div id="tabgrouponsitec1">
-                      <table width="100%" border="0" cellspacing="0" cellpadding="2">
-                        <tr>
-                          <td valign="top">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                              <tr bgcolor="#f7faff">
-                                <td valign="top">From Date:</td>
-                                <td valign="top"><input name="fromdate" type="text" class="swifttext" id="DPC_fromdate"
-                                    size="30" autocomplete="off" value="<?php echo date('01-m-Y'); ?>"
-                                    style="background:#FEFFE6;" />
-                                  <input type="hidden" name="lastslno" id="lastslno" value="" />
-                                  <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
-                                  <input type="hidden" name="loggedusertype" id="loggedusertype"
-                                    value="<?php echo ($usertype); ?>" />
-                                  <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
-                                    value="<?php echo ($reportingauthority); ?>" />
-                                </td>
-                              </tr>
-                              <tr bgcolor="#edf4ff">
-                                <td valign="top">To Date:</td>
-                                <td valign="top"><input name="todate" type="text" class="swifttext" id="DPC_todate"
-                                    size="30" autocomplete="off" value="<?php echo date('d-m-Y'); ?>"
-                                    style="background:#FEFFE6;" /></td>
-                              </tr>
-                              <tr bgcolor="#f7faff">
-                                <td valign="top">User Name:</td>
-                                <td valign="top"><select name="userid" id="userid" class="swiftselect">
-                                    <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
-                                      <!--                      <option value="">ALL</option>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        Attendance > Advanced
+      </div>
+      <div class="card-body">
+        <form method="post" name="submitform" id="submitform" action="../reports-excel/attendancereport.php">
+          <div id="tabgrouponsitec1">
+            <div class="form-group row">
+              <label for="DPC_fromdate" class="col-sm-2 col-form-label">From Date:</label>
+              <div class="col-sm-10">
+                <input name="fromdate" type="text" class="form-control" id="DPC_fromdate" size="30" autocomplete="off"
+                  value="<?php echo date('01-m-Y'); ?>" style="background:#FEFFE6;">
+                <input type="hidden" name="lastslno" id="lastslno" value="" />
+                <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
+                <input type="hidden" name="loggedusertype" id="loggedusertype" value="<?php echo ($usertype); ?>" />
+                <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
+                  value="<?php echo ($reportingauthority); ?>" />
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="DPC_todate" class="col-sm-2 col-form-label">To Date:</label>
+              <div class="col-sm-10">
+                <input name="todate" type="text" class="form-control" id="DPC_todate" size="30" autocomplete="off"
+                  value="<?php echo date('d-m-Y'); ?>" style="background:#FEFFE6;">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="userid" class="col-sm-2 col-form-label">User Name:</label>
+              <div class="col-sm-10">
+                <select name="userid" id="userid" class="form-control form-select">
+                  <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
+                    <!--                      <option value="">ALL</option>
 -->
-                                      <?php include('../inc/useridselectionreports.php');
-                                    } else { ?>
-                                      <?php include('../inc/useridselectionreports.php');
-                                    } ?>
-                                  </select></td>
-                              </tr>
-                              <tr bgcolor="#f7faff">
-                                <td valign="top">Include Holidays:</td>
-                                <td valign="top"><input name="holidays" type="checkbox" id="holidays" checked></td>
-                              </tr>
-                              <tr bgcolor="#f7faff">
-                                <td valign="top">Include Working Days:</td>
-                                <td valign="top"><input name="workingdays" type="checkbox" id="workingdays" checked></td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;">
-                            <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
-                              <tr>
-                                <td width="68%" height="35" align="left" valign="middle">
-                                  <div id="form-error"></div>
-                                </td>
-                                <td width="32%" height="35" align="right" valign="middle">
-                                  <input name="generate" type="submit" class="swiftchoicebutton" id="generate"
-                                    value="Generate" />
-                                </td>
-                              </tr>
-                            </table>
-                          </td>
-                        </tr>
-                      </table>
-                    </div>
-                  </form>
-                </div>
-              </td>
-            </tr>
-
-          </table>
-        </td>
-      </tr>
-      <tr>
-        <td style="padding:0">&nbsp;</td>
-      </tr>
-      <tr>
-        <td></td>
-      </tr>
-    </table>
+                    <?php include('../inc/useridselectionreports.php');
+                  } else { ?>
+                    <?php include('../inc/useridselectionreports.php');
+                  } ?>
+                </select>
+              </div>
+            </div>
+            <div class="form-check">
+              <input name="holidays" type="checkbox" class="form-check-input" id="holidays" checked>
+              <label class="form-check-label" for="holidays">Include Holidays</label>
+            </div>
+            <div class="form-check">
+              <input name="workingdays" type="checkbox" class="form-check-input" id="workingdays" checked>
+              <label class="form-check-label" for="workingdays">Include Working Days</label>
+            </div>
+            <div class="form-group row">
+              <div class="col-sm-12  text-end">
+                <div id="form-error"></div>
+                <button name="generate" type="submit" class="btn btn-primary">Generate</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 <?php } ?>

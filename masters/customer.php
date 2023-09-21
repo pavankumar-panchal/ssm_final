@@ -17,13 +17,11 @@ $userid = imaxgetcookie('ssmuserid'); ?>
                 <td colspan="2" align="left"class="header-line" style="padding-left:10px" >Customer Selection</td>
               </tr>
               <tr>
-                <td colspan="2">
-                  <form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
+                <td colspan="2"><form id="filterform" name="filterform" method="post" action="" onsubmit="return false;">
                     <table width="90%" border="0" cellspacing="0" cellpadding="3">
                       <tr>
                         <td width="73%" height="34" id="customerselectionprocess" style="padding:0" align="left">&nbsp;</td>
-                        <td width="27%" ><div align="right"><a onclick="refreshcustomerarray();" style="cursor:pointer; padding-right:15px;">
-                        <img src="../images/imax-customer-refresh.jpg" alt="Refresh customer" border="0" title="Refresh customer Data" /></a></div></td>
+                        <td width="27%" ><div align="right"><a onclick="refreshcustomerarray();" style="cursor:pointer; padding-right:15px;"><img src="../images/imax-customer-refresh.jpg" alt="Refresh customer" border="0" title="Refresh customer Data" /></a></div></td>
                       </tr>
                       <tr>
                         <td colspan="2" align="left" ><input name="detailsearchtext" type="text" class="swifttext" id="detailsearchtext" size="27" onkeyup="customersearch(event);"  autocomplete="off"/>
@@ -78,13 +76,15 @@ $userid = imaxgetcookie('ssmuserid'); ?>
                           <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #308ebc;">
                             <tr>
                               <td valign="top"><div>
+                                
                                   <form action="" method="post" name="searchfilterform" id="searchfilterform" onsubmit="return false;">
                                     <table width="100%" border="0" cellspacing="0" cellpadding="2">
                                       <tr>
                                         <td width="100%" align="left" class="header-line" style="padding:0">&nbsp;&nbsp;Search Option</td>
                                       </tr>
                                       <tr>
-                                        <td valign="top" ><table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#FFD3A8" style="border:dashed 1px #545429">
+                                        <td valign="top" >
+                                          <table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#FFD3A8" style="border:dashed 1px #545429">
 <tr>
   <td width="57%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="4" style=" border-right:1px solid #CCCCCC">
     <tr>
@@ -317,22 +317,27 @@ $userid = imaxgetcookie('ssmuserid'); ?>
                                                 <tr>
                                                   <td><table width="100%" border="0" cellspacing="0" cellpadding="2">
                                                       <tr>
-                                                        <td colspan="2" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="3">
+                                                        <td colspan="2" valign="top">
+                                                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
                                                             <tr>
                                                               <td align="left" bgcolor="#F7FAFF">Business Name [Company]:</td>
-                                                              <td align="left" bgcolor="#F7FAFF"><input name="businessname" type="text" class="swifttext-mandatory" id="businessname" size="76" maxlength="100"  autocomplete="off" />
+                                                              <td align="left" bgcolor="#F7FAFF">
+                                                                <input name="businessname" type="text" class="swifttext-mandatory" id="businessname" size="76" maxlength="100"  autocomplete="off" />
                                                                   <input type="hidden" name="lastslno" id="lastslno" />
                                                               </td>
                                                             </tr>
-                                                        </table></td>
+                                                        </table>
+                                                    </td>
                                                       </tr>
-                                                     <tr>
-                                                                <td  colspan="2" valign="top" style="padding:0px" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                     <tr>   
+                                                   <td  colspan="2" valign="top" style="padding:0px" >
+                                                     <table width="100%" border="0" cellspacing="0" cellpadding="0">
                                                                     <tr>
                                                                       <td width="20%" align="left" bgcolor="#edf4ff" style="padding:4px">Address:</td>
                                                                       <td width="80%" align="left" bgcolor="#edf4ff" style="padding-bottom:3px; padding-right:3px; padding-top:3px; padding-left:1px"><input name="address" type="text" class="swifttext" id="address" size="88" maxlength="200"  autocomplete="off" /></td>
                                                                   </tr>
-                                                                  </table></td>
+                                                                  </table>
+                                                                </td>
                                                               </tr>
                                                       <tr>
                                                         <td width="51%" valign="top" style="border-right:1px solid #d1dceb;"><table width="100%" border="0" cellspacing="0" cellpadding="3">
@@ -481,19 +486,7 @@ $userid = imaxgetcookie('ssmuserid'); ?>
                                                                                     <td class="td-border-grid"  bgcolor="#edf4ff">&nbsp;</td>
                                                                                     <td class="td-border-grid"  bgcolor="#edf4ff">&nbsp;</td>
                                                                                   </tr>
-                                                                                  <!--<tr>
-                                                                                    <td class="td-border-grid"  bgcolor="#F7FAFF"><strong>SVI</strong></td>
-                                                                                    <td class="td-border-grid" bgcolor="#F7FAFF">&nbsp;</td>
-                                                                                    <td class="td-border-grid" bgcolor="#F7FAFF">&nbsp;</td>
-                                                                                    <td class="td-border-grid" bgcolor="#F7FAFF">&nbsp;</td>
-                                                                                  </tr>
-                                                                                  <tr>
-                                                                                    <td class="td-border-grid"  bgcolor="#edf4ff"><strong>SVH</strong></td>
-                                                                                    <td class="td-border-grid"  bgcolor="#edf4ff">&nbsp;</td>
-                                                                                    <td class="td-border-grid"  bgcolor="#edf4ff">&nbsp;</td>
-                                                                                    <td class="td-border-grid"  bgcolor="#edf4ff">&nbsp;</td>
-                                                                                  </tr>
-                                                                                  -->
+                                                                             
                                                                                   <tr>
                                                                                     <td class="td-border-grid" bgcolor="#F7FAFF"><strong>STO</strong></td>
                                                                                     <td class="td-border-grid" bgcolor="#F7FAFF">&nbsp;</td>

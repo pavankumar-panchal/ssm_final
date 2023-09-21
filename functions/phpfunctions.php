@@ -1,3 +1,5 @@
+
+
 <?php
 
 //Include Database Configuration details
@@ -949,11 +951,19 @@ function gettimeDifference($date1, $time1, $date2, $time2)
 	$endtime = explode(":", $time2);
 
 	$secondsDifference = mktime(
-		$endtime[0], $endtime[1], $endtime[2],
-		$enddate[1], $enddate[2], $enddate[0]
+		$endtime[0],
+		$endtime[1],
+		$endtime[2],
+		$enddate[1],
+		$enddate[2],
+		$enddate[0]
 	) - mktime(
 		$starttime[0],
-		$starttime[1], $starttime[2], $startdate[1], $startdate[2], $startdate[0]
+		$starttime[1],
+		$starttime[2],
+		$startdate[1],
+		$startdate[2],
+		$startdate[0]
 	);
 
 
