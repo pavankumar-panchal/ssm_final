@@ -2,9 +2,79 @@
 if (!isset($message)) {
   $message = null;
 }
+if (!isset($_POST['fullname'])) {
+  $_POST['fullname'] = null;
+}
+if (!isset($_POST['presentaddress'])) {
+  $_POST['presentaddress'] = null;
+}
+if (!isset($_POST['permanentaddress'])) {
+  $_POST['permanentaddress'] = null;
+}
+if (!isset($_POST['emergencynumber'])) {
+  $_POST['emergencynumber'] = null;
+}
+if (!isset($_POST['emergencyremarks'])) {
+  $_POST['emergencyremarks'] = null;
+}
+if (!isset($_POST['dob'])) {
+  $_POST['dob'] = null;
+}
+if (!isset($_POST['doj'])) {
+  $_POST['doj'] = null;
+}
+if (!isset($_POST['designation'])) {
+  $_POST['designation'] = null;
+}
+if (!isset($_POST['personalemail'])) {
+  $_POST['personalemail'] = null;
+}
+if (!isset($_POST['officialemail'])) {
+  $_POST['officialemail'] = null;
+}
+if (!isset($_POST['mobile'])) {
+  $_POST['mobile'] = null;
+}
+if (!isset($_POST['gender'])) {
+  $_POST['gender'] = null;
+}
+if (!isset($message)) {
+  $message = null;
+}
+
+
+$fullname = $_POST['fullname'];
+$gender = $_POST['gender'];
+$presentaddress = $_POST['presentaddress'];
+$permanentaddress = $_POST['permanentaddress'];
+$mobile = $_POST['mobile'];
+$emergencynumber = $_POST['emergencynumber'];
+$emergencyremarks = $_POST['emergencyremarks'];
+$dob = $_POST['dob'];
+$doj = $_POST['doj'];
+$designation = $_POST['designation'];
+$personalemail = $_POST['personalemail'];
+$officialemail = $_POST['officialemail'];
+
+$query = "SELECT * FROM ssm_users where slno = '" . $user . "'";
+$fetch = runmysqlqueryfetch($query);
+
+$d_fullname = $fetch['fullname'];
+$d_gender = $fetch['gender'];
+$d_presentaddress = $fetch['presentaddress'];
+$d_permanentaddress = $fetch['permanentaddress'];
+$d_mobile = $fetch['mobile'];
+$d_emergencynumber = $fetch['emergencynumber'];
+$d_emergencyremarks = $fetch['emergencyremarks'];
+$d_dob = changedateformat($fetch['dob']);
+$d_doj = changedateformat($fetch['doj']);
+$d_designation = $fetch['designation'];
+$d_personalemail = $fetch['personalemail'];
+$d_officialemail = $fetch['officialemail'];
 
 ?>
-<link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
+
+
 <script language="javascript" src="../functions/editprofile.js?dummy = <?php echo (rand()); ?>"
   type="text/javascript"></script>
 
@@ -24,7 +94,8 @@ if (!isset($message)) {
           <div class="col-md-6">
             <div class="form-group">
               <label for="customername">Full Name:</label>
-              <input name="fullname" type="text" class="form-control " id="fullname" autocomplete="off">
+              <input name="fullname" type="text" class="form-control " id="fullname" autocomplete="off"
+                value="<?php echo ($d_fullname); ?>">
             </div>
 
             <div class="form-group">
@@ -50,16 +121,16 @@ if (!isset($message)) {
 
             <div class="form-group">
               <label for="mobile">Mobile:</label>
-              <input name="mobile" type="tel" class="form-control " id="mobile" autocomplete="off">
+              <input name="mobile" type="tel" class="form-control " id="mobile" autocomplete="off" value="<?php echo ($d_mobile); ?>">
             </div>
 
             <div class="form-group">
               <label for="mobile ">Designation:</label>
-              <input name="designation" type="text" class="form-control " id="designation" autocomplete="off">
+              <input name="designation" type="text" class="form-control " id="designation" autocomplete="off"  value="<?php echo ($d_designation); ?>">
             </div>
             <div class="form-group">
               <label for="mobile">Date of Birth:</label>
-              <input name="dob" type="text" class="form-control " id="DPC_dob" autocomplete="off" value="">
+              <input name="dob" type="text" class="form-control " id="DPC_dob" autocomplete="off" value="<?php echo ($d_dob); ?>">
             </div>
             <div class="form-group">
               <label for="mobile">Present Address:</label>
@@ -76,24 +147,28 @@ if (!isset($message)) {
             </div>
             <div class="form-group">
               <label for="mobile">Date of Joining:</label>
-              <input name="doj" type="text" class="form-control " id="DPC_doj" value="" autocomplete="off">
+              <input name="doj" type="text" class="form-control " id="DPC_doj" value="<?php echo ($d_doj); ?>" autocomplete="off">
 
             </div>
             <div class="form-group">
               <label for="mobile">Personal Email:</label>
-              <input name="personalemail" type="email" class="form-control " id="personalemail" autocomplete="off">
+              <input name="personalemail" type="email" class="form-control " id="personalemail" autocomplete="off"
+                value="<?php echo ($d_personalemail); ?>">
             </div>
             <div class="form-group">
               <label for="mobile">Official Email:</label>
-              <input name="officialemail" type="email" class="form-control " id="officialemail" autocomplete="off">
+              <input name="officialemail" type="email" class="form-control " id="officialemail" autocomplete="off"
+                value="<?php echo ($d_officialemail); ?>">
             </div>
             <div class="form-group">
               <label for="mobile">Contatc Number[In case of Emergency]:</label>
-              <input name="emergencynumber" type="text" class="form-control " id="emergencynumber" autocomplete="off">
+              <input name="emergencynumber" type="text" class="form-control " id="emergencynumber" autocomplete="off"
+                value="<?php echo ($d_emergencynumber); ?>">
             </div>
             <div class="form-group">
               <label for="mobile">Remarks[Details of person in case of Emergency]:</label>
-              <input name="emergencyremarks" type="text" class="form-control " id="emergencyremarks" autocomplete="off">
+              <input name="emergencyremarks" type="text" class="form-control " id="emergencyremarks" autocomplete="off"
+               value="<?php echo ($d_emergencyremarks); ?>">
             </div>
             <!-- Repeat similar pattern for other form inputs -->
           </div>
@@ -105,11 +180,10 @@ if (!isset($message)) {
               <div id="form-error"></div>
             </div>
             <div class="col-md-4 text-end mt-3">
+              <input name="clear" type="reset" class="btn btn-secondary" id="view" value="New"
+              >
               <input name="update" type="submit" class="btn btn-primary " id="update" value="update"
                 onclick="formsubmit('update');">
-              <input name="clear" type="reset" class="btn btn-secondary" id="view" value="New"
-                onclick="formsubmit('toview');">
-
             </div>
           </div>
         </div>
@@ -184,7 +258,7 @@ if (isset($_POST["update"])) {
             </div>
           </div>
           <div class="form-group row">
-            <div class="col-sm-9 offset-sm-3 text-end">
+            <div class="col-sm-9 offset-sm-3  text-end">
               <input name="update" type="submit" class="btn btn-primary up" id="update" value="Update">
               <input name="clear" type="reset" class="btn btn-secondary up" id="clear" value="Clear"
                 onclick="document.getElementById('form-error').innerHTML = ''">
