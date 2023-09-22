@@ -12,8 +12,7 @@
   <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
   <title>SSM Support</title>
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
   <link rel="manifest" href="../assets/favicon/manifest.json">
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
@@ -276,7 +275,7 @@
             </li>
           </ul>
         </div>
-      
+
 
         <div class="header-divider p-4">
           <div class="container-fluid">
@@ -289,7 +288,7 @@
       <?php } ?>
 
 
-      
+
 
     </header>
     <div class="body flex-grow-1 px-3 bg-white">
