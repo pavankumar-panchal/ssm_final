@@ -2,201 +2,214 @@
 <script language="javascript" src="../functions/call-statistics.js?dummy = <?php echo (rand()); ?>"
   type="text/javascript"></script>
 <div id="contentdiv" style="display:block;">
-  <table width="100%" border="0" cellspacing="0" cellpadding="4">
-    <tr>
-      <td class="content-header">Reports > Call Statistics</td>
-    </tr>
-    <tr>
-      <td></td>
-    </tr>
-    <tr>
-      <td style="padding:0">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0"
-          style="border:1px solid #6393df; border-top:none;">
-          <tr style="cursor:pointer" onClick="showhide('maindiv','toggleimg');">
-            <td class="header-line" style="padding:0">&nbsp;&nbsp;Enter the Details</td>
-            <td align="right" class="header-line" style="padding-right:7px">
-              <div align="right"><img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
-                  align="absmiddle" /></div>
-            </td>
-          </tr>
-          <tr>
-            <td colspan="2" valign="top">
-              <div id="maindiv">
-                <form action="" method="post" name="submitform" id="submitform" onSubmit="return false;">
-                  <table width="100%" border="0" cellspacing="0" cellpadding="2">
-                    <tr>
-                      <td valign="top">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                          <tr bgcolor="#f7faff">
-                            <td valign="top">Registers:</td>
-                            <td valign="top"><label><input name='check[]' type='checkbox' value='Call'
-                                  checked="checked" />
-                                Calls</label><label>
-                                <input name='check[]' type='checkbox' value='Email' checked="checked" />
-                                Emails</label><label>
-                                <input name='check[]' type='checkbox' value='Skype' checked="checked" />
-                                Skype </label><label>
-                                <input type='checkbox' name='check[]' value='Error' />
-                                Errors </label><label>
-                                <input type='checkbox' name='check[]' value='Onsite' />
-                                Onsite</label><label>
-                                <input name='check[]' type='checkbox' value='Reference' />
-                                References</label><label>
-                                <input name='check[]' type='checkbox' value='Inhouse' />
-                                Inhouse</label><label>
-                                <input name='check[]' type='checkbox' value='Requirement' />
-                                Requirements</label>
-                              <input type="hidden" name="lastslno" id="lastslno" value="" />
-                              <input type="hidden" name="loggeduser" id="loggeduser" value="<?php echo ($user); ?>" />
-                              <input type="hidden" name="loggedusertype" id="loggedusertype"
-                                value="<?php echo ($usertype); ?>" />
-                              <input type="hidden" name="endtime" id="endtime" value="" />
-                              <input type="hidden" name="loggedreportingauthority" id="loggedreportingauthority"
-                                value="<?php echo ($reportingauthoritytype); ?>" />
-                            </td>
-                          </tr>
-                          <tr bgcolor="#edf4ff">
-                            <td valign="top">From Date:</td>
-                            <td valign="top">
-                              <input name="fromdate" type="text" class="swifttext" id="DPC_fromdate" size="30"
-                                autocomplete="off" style="background:#FEFFE6;"
-                                value="<?php echo (datetimelocal('d-m-Y')); ?>" />
-                            </td>
-                          </tr>
-                          <tr bgcolor="#f7faff">
-                            <td valign="top">To Date:</td>
-                            <td valign="top"><input name="todate" type="text" class="swifttext" id="DPC_todate"
-                                size="30" autocomplete="off" style="background:#FEFFE6;"
-                                value="<?php echo (datetimelocal('d-m-Y')); ?>" /></td>
-                          </tr>
-                          <tr bgcolor="#edf4ff">
-                            <td valign="top">Entered By:</td>
-                            <td valign="top">
-                              <select name="userid" id="userid" class="swiftselect">
-                                <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
-                                  <option value="">ALL</option>
-                                <?php } ?>
-                                <?php include('../inc/useridselectionreports.php'); ?>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr bgcolor="#f7faff">
-                            <td valign="top">Caller Type:</td>
-                            <td valign="top"><label>
-                                <input name='customer' type='checkbox' id='customer' value='Customer'
-                                  checked="checked" />
-                                Customers </label><label>
-                                <input name='dealer' type='checkbox' id='dealer' value='Dealer' checked="checked" />
-                                Dealers</label>
-                              <label>
-                                <input name='employee' type='checkbox' id='employee' value='employee'
-                                  checked="checked" />
-                                Employees</label><label>
-                                <input name='ssmuser' type='checkbox' id='ssmuser' value='SSMUser' checked="checked" />
-                                SSM Users</label>
-                            </td>
-                          </tr>
-                          <tr bgcolor="#edf4ff">
-                            <td valign="top">Category:</td>
-                            <td valign="top"><select name="category" id="category" class="swiftselect">
-                                <option value="" selected="selected">ALL</option>
-                                <option value="BLR">Bangalore</option>
-                                <option value="CSD">CSD</option>
-                                <option value="KKG">KKG</option>
-                              </select></td>
-                          </tr>
-                          <tr bgcolor="#f7faff">
-                            <td valign="top">Support Unit:</td>
-                            <td valign="top">
-                              <select name="supportunit" class="swiftselect" id="supportunit">
-                                <option value="">ALL</option>
-                                <?php include('../inc/supportunit.php'); ?>
-                              </select>
-                            </td>
-                          </tr>
-                          <tr bgcolor="#edf4ff">
-                            <td valign="top">Anonymous:</td>
-                            <td valign="top"><label>
-                                <input type="radio" name="anonymous" id="databasefield11" value="yes" /> Yes</label>
-                              <label>
-                                <input type="radio" name="anonymous" id="databasefield12" value="no" /> No</label>
-                              <label>
-                                <input type="radio" name="anonymous" id="databasefield13" value="" checked="checked" />
-                                Both</label>
-                            </td>
-                          </tr>
-                          <tr bgcolor="#f7faff">
-                            <td valign="top">Report on:</td>
-                            <td valign="top"><label>
-                                <input name="reporton" type="radio" id="reporton0" value="statistics"
-                                  checked="checked" />
-                                Statistics</label>
-                              <label>
-                                <input type="radio" name="reporton" id="reporton1" value="details" />
-                                Details</label>
-                              <label></label>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="right" valign="middle" style="padding-right:15px; border-top:1px solid #d1dceb;">
-                        <table width="100%" border="0" cellspacing="0" cellpadding="0" height="35">
-                          <tr>
-                            <td width="68%" height="35" align="left" valign="middle">
-                              <div id="form-error"></div>
-                            </td>
-                            <td width="32%" height="35" align="right" valign="middle">
-                              <input name="view" type="submit" class="swiftchoicebutton" id="view" value="View"
-                                onClick="formsubmit('view');" />
-                              &nbsp;&nbsp;&nbsp;
-                              <input name="toexcel" type="submit" class="swiftchoicebutton-orange" id="toexcel"
-                                value="To Excel" onClick="formsubmit('toexcel');" />
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </form>
-              </div>
-            </td>
-          </tr>
 
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding:0">&nbsp;</td>
-    </tr>
-    <tr>
-      <td id="processingbar"></td>
-    </tr>
-    <tr>
-      <td style="padding:0">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0"
-          style="border:1px solid #6393df; border-top:none;">
-          <tr>
-            <td class="header-line" style="padding:0">&nbsp;&nbsp;View Data:</td>
-            <td align="right" class="header-line" style="padding-right:7px;"></td>
-          </tr>
-          <tr>
-            <td>&nbsp;</td>
-            <td colspan="2" valign="top">
-              <div id="displaystatsreport" style="overflow:auto; height:300px; width:1060PX; padding:2px;"
-                align="center"></div>
-            </td>
-            <td>&nbsp;</td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <td style="padding:0">&nbsp;</td>
-    </tr>
-  </table>
+
+
+
+
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header d-flex justify-content-between align-items-center" style="cursor:pointer"
+        onclick="showhide('maindiv','toggleimg');">
+        <h5 class="card-title m-0">Enter the Details</h5>
+        <div class="card-header-actions">
+          <img src="../images/minus.jpg" alt="Toggle Image" id="toggleimg" name="toggleimg" class="img-fluid" />
+        </div>
+      </div>
+      <div class="card-body">
+        <form action="" method="post" name="submitform" id="submitform" onSubmit="return false;">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="registers">Registers:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="callCheckbox" name="check[]" value="Call"
+                    checked="checked">
+                  <label class="form-check-label" for="callCheckbox">Calls</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="emailCheckbox" name="check[]" value="Email"
+                    checked="checked">
+                  <label class="form-check-label" for="emailCheckbox">Emails</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="skypeCheckbox" name="check[]" value="Skype"
+                    checked="checked">
+                  <label class="form-check-label" for="skypeCheckbox">Skype</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="errorCheckbox" name="check[]" value="Error" />
+                  <label class="form-check-label" for="errorCheckbox">Errors</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="onsiteCheckbox" name="check[]" value="Onsite" />
+                  <label class="form-check-label" for="onsiteCheckbox">Onsite</label>
+                </div>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="referenceCheckbox" name="check[]"
+                    value="Reference" />
+                  <label class="form-check-label" for="referenceCheckbox">References</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="inhouseCheckbox" name="check[]" value="Inhouse" />
+                  <label class="form-check-label" for="inhouseCheckbox">Inhouse</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="requirementCheckbox" name="check[]"
+                    value="Requirement" />
+                  <label class="form-check-label" for="requirementCheckbox">Requirements</label>
+                </div>
+
+                <!-- Add other checkboxes here -->
+              </div>
+              <div class="form-group">
+                <label for="fromdate">From Date:</label>
+                <input type="text" class="form-control" name="fromdate" id="DPC_fromdate" size="30" autocomplete="off"
+                  style="background:#FEFFE6;" value="<?php echo (datetimelocal('d-m-Y')); ?>">
+              </div>
+              <div class="form-group">
+                <label for="todate">To Date:</label>
+                <input type="text" class="form-control" name="todate" id="DPC_todate" size="30" autocomplete="off"
+                  style="background:#FEFFE6;" value="<?php echo (datetimelocal('d-m-Y')); ?>">
+              </div>
+              <div class="form-group">
+                <label for="userid">Entered By:</label>
+                <select name="userid" id="userid" class="form-control form-select">
+                  <?php if ($usertype == 'MANAGEMENT' || $usertype == 'ADMIN' || $usertype == 'TEAMLEADER') { ?>
+                    <option value="">ALL</option>
+                  <?php } ?>
+                  <?php include('../inc/useridselectionreports.php'); ?>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="callertype">Caller Type:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type='checkbox' id='customer' name='customer' value='Customer'
+                    checked="checked" />
+                  <label class="form-check-label" for="customer">Customers</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type='checkbox' id='dealer' name='dealer' value='Dealer'
+                    checked="checked" />
+                  <label class="form-check-label" for="dealer">Dealers</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type='checkbox' id='employee' name='employee' value='Employee'
+                    checked="checked" />
+                  <label class="form-check-label" for="employee">Employees</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type='checkbox' id='ssmuser' name='ssmuser' value='SSMUser'
+                    checked="checked" />
+                  <label class="form-check-label" for="ssmuser">SSM Users</label>
+                </div>
+
+                <!-- Add other checkboxes here -->
+              </div>
+              <div class="form-group">
+                <label for="category">Category:</label>
+                <select name="category" id="category" class="form-control form-select">
+                  <option value="" selected="selected">ALL</option>
+                  <option value="BLR">Bangalore</option>
+                  <option value="CSD">CSD</option>
+                  <option value="KKG">KKG</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="supportunit">Support Unit:</label>
+                <select name="supportunit" class="form-control form-select" id="supportunit">
+                  <option value="">ALL</option>
+                  <?php include('../inc/supportunit.php'); ?>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Anonymous:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="anonymous" id="databasefield11" value="yes"
+                    checked="checked">
+                  <label class="form-check-label" for="databasefield11">Yes</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="anonymous" id="databasefield12" value="no">
+                  <label class="form-check-label" for="databasefield12">No</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="anonymous" id="databasefield13" value=""
+                    checked="checked">
+                  <label class="form-check-label" for="databasefield13">Both</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Report on:</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="reporton" id="reporton0" value="statistics"
+                    checked="checked">
+                  <label class="form-check-label" for="reporton0">Statistics</label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="reporton" id="reporton1" value="details">
+                  <label class="form-check-label" for="reporton1">Details</label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="text-right">
+            <div id="form-error"></div>
+            <button type="submit" class="btn btn-primary" id="view" onclick="formsubmit('view');">View</button>
+            <button type="submit" class="btn btn-warning" id="toexcel" onclick="formsubmit('toexcel');">To
+              Excel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div id="processingbar"></div>
+
+
+  <div class="container mt-4">
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">View Data:</h5>
+        <div class="text-end">
+          <!-- Add any content for the right side of the header here -->
+        </div>
+      </div>
+      <div class="card-body">
+        <div id="displaystatsreport" class="overflow-auto" style="height: 300px; width: 1060px; padding: 2px;"
+          align="center"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
 </div>
 
 
