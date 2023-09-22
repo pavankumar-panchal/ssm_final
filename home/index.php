@@ -181,7 +181,7 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
       <script language="javascript" src="../functions/annotatedtimeline.js" type="text/javascript"></script>
 
 
-      <div class="container ">
+      <div class="container mt-4 ">
         <div class="row">
           <div class="col-md-12">
             <div class="card ">
@@ -237,10 +237,10 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                 <div class="" id="dash_teamchart">
                   <div class="card-body">
                     <div class="row">
-
                       <div class="col-md-12">
-                        <?php echo ($attendanceCal); ?>
-
+                        <?php 
+                        echo ($attendanceCal);
+                         ?>
                       </div>
                     </div>
                   </div>
@@ -352,3 +352,5 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
 </body>
 
 </html>
+
+<?php include("../inc/footer.php");

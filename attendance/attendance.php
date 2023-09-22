@@ -4,16 +4,15 @@ if ($usertype == 'GUEST')
 else {
   ?>
   <link rel="stylesheet" type="text/css" href="../style/main.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+ 
 
   <script language="javascript" src="../functions/attendancereport.js" type="text/javascript"></script>
 
-  <p class="content-header">Attendance >
+  <!-- <p class="content-header">Attendance >
     <?php echo (ucwords(strtolower($loggedusername))); ?>
-  </p>
+  </p> -->
 
-  <div class="container ">
+  <div class="container  mt-4">
     <div class="table-responsive ">
       <table class="table table-bordered  rounded-3"
         style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); overflow: hidden; ">
@@ -104,47 +103,6 @@ else {
       </table>
     </div>
   </div>
-
-
-
-  <!-- <table width="100%" border="0" cellspacing="0" cellpadding="0" style="border:1px solid #6393df; border-top:none;">
-    <tr>
-      <td width="10%" class="header-line" style="padding:0">&nbsp;&nbsp;View Records: </td>
-      <td width="75%" class="header-line" style="padding:0"><span id="tabgroupgridwb1"></span></td>
-      <td width="15%" class="header-line" style="padding:0"></td>
-    </tr>
-    <tr>
-      <td colspan="3" align="center" valign="top">
-        <table width="100%" border="0" cellspacing="0" cellpadding="0">
-          <tr>
-            <td valign="bottom">
-              <table width="100%" border="0" cellspacing="0" cellpadding="3">
-                <tr>
-                  <td><img src="../images/white-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Absent<br />
-                    <br />
-                    <img src="../images/orange-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Holiday<br />
-                    <br />
-                    <img src="../images/blue-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Present on Holiday<br />
-                    <br />
-                    <img src="../images/yellow-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Half Day<br />
-                    <br />
-                    <img src="../images/green-box.gif" align="absmiddle" style="border:1px solid #666666" />
-                    &nbsp;Present
-                  </td>
-                </tr>
-              </table>
-            </td>
-            <td valign="top">
-              <div id="tabgroupgridc1" style="height:auto; width:900PX; padding:2px;" align="center"></div>
-            </td>
-          </tr>
-        </table>
-    </tr>
-  </table> -->
 
 
 
