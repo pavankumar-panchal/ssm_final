@@ -280,7 +280,7 @@
         <div class="header-divider p-4">
           <div class="container-fluid">
             <nav aria-label="breadcrumb">
-              <span class="breadcrumb-item"><a href="#">Home / Dashboard</a></span>
+              <span class="breadcrumb-item"><a href="# " style="color:#606060;">Home / Dashboard</a></span>
             </nav>
           </div>
         </div>

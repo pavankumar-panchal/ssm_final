@@ -13,8 +13,10 @@ else {
 <link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
 <script language="javascript" src="../functions/callregister.js?dummy = <?php echo (rand()); ?>"
   type="text/javascript"></script>
-<div id="contentdiv" style="display:block;">
 
+
+
+<div id="contentdiv" style="display:block;">
   <div class="container users_la mt-5">
     <div class="row">
       <div class="col-md-12">
@@ -28,7 +30,6 @@ else {
                 <!-- Your form content goes here -->
                 <div class="display" style="display: flex; flex-direction: row; width:100%;">
                   <!-- first div -->
-
                   <div class="mb-3" style="width: 50%; margin:20px;">
                     <label for="customername" class="form-label">Call Type:</label>
                     <div class="opt d-flex flex-row ">
@@ -105,9 +106,7 @@ else {
                     ?>
 
                   </div>
-
                   <!-- second -->
-
                   <div class="mb-3 " style="width: 50%; margin:20px;">
                     <label for="customername" class="form-label">Product Name(<font color="#FF0000">
                         Optional</font>)</label>
@@ -127,14 +126,12 @@ else {
                     <label for="customername" class="form-label">Person Name:</label>
                     <input name="personname" type="text" class="form-control" id="personname" size="20"
                       autocomplete="off" isdatepicker="true">
-
                     <label for="customername" class="form-label">Problem:</label>
                     <input name="problem" type="text" class="form-control" id="problem" size="20" autocomplete="off"
                       isdatepicker="true">
                     <a href="javascript:void(0);" style="cursor:pointer"
                       onclick="getquestionfunc(); getquestion();"><img src="../images/get-problem.gif" width="22"
                         height="22" border="0" align="top" /></a>
-
                     <label for="teamleaderremarks" class="form-label">Status:</label>
                     <select name="status" class="form-select  form-control" id="status" onchange="">
                       <option value="" selected="selected">
@@ -150,13 +147,11 @@ else {
                     <select name="callcategory" class="form-select swiftselect form-control" id="callcategory"
                       onchange="">
                       <?php include('../inc/callcategory.php'); ?>
-
                     </select>
                     <label for="customername" class="form-label">Solved Through:</label>
                     <input name="stremoteconnection" type="text" class="form-control" id="stremoteconnection" size="20"
                       autocomplete="off" isdatepicker="true">Remote
                     Connection
-
                     <label for="customername" class="form-label">Transferred To: </label>
                     <select name="transferredto" class="form-select swiftselect form-control" id="transferredto"
                       onchange="" selected="selected">
