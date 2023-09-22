@@ -94,7 +94,7 @@ $d_officialemail = $fetch['officialemail'];
   integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 <div class="container mt-4">
-  <div class="card border " class="rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);margin-top: 50px;">
+  <div class="card border rounded" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); margin-top: 50px;">
     <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv', 'toggleimg');">
       View Profile
       <span class="float-right">
@@ -102,133 +102,94 @@ $d_officialemail = $fetch['officialemail'];
       </span>
     </div>
     <div id="maindiv">
-      <div class="card-body ">
-        <div class="row ">
-          <div class="col-md-6 ">
-
-
-
-
-
-
-
-
-
-          
-            <table class="table table-bordered ">
-              <tbody>
-                <tr>
-                  <td><strong>User Name:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_fullname); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Gender:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_gender); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Mobile:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_mobile); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Designation:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_designation); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Date of Birth:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_dob); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Present Address:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_presentaddress); ?>
-                    </font>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-
-
-          </div>
+      <div class="card-body">
+        <div class="row">
           <div class="col-md-6">
-            <table class="table table-bordered ">
-              <tbody>
-                <tr>
-                  <td><strong>Permanent Address:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_permanentaddress); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Date of joining:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_doj); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Personal Email:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_personalemail); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Official Email:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_officialemail); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Contact Number: </strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_emergencynumber); ?>
-                    </font>
-                  </td>
-                </tr>
-                <tr>
-                  <td><strong>Emergency Remarks:</strong></td>
-                  <td>
-                    <font color="#FF6200">
-                      <?php echo ($d_emergencyremarks); ?>
-                    </font>
-                  </td>
-                </tr>
-              </tbody>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>User Name:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_fullname); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Gender:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_gender); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Mobile:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_mobile); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Designation:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_designation); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Date of Birth:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_dob); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Present Address:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_presentaddress); ?>
+                </span>
+              </li>
+            </ul>
+          </div>
 
-
-            </table>
+          <div class="col-md-6">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <strong>Permanent Address:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_permanentaddress); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Date of Joining:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_doj); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Personal Email:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_personalemail); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Official Email:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_officialemail); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Contact Number:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_emergencynumber); ?>
+                </span>
+              </li>
+              <li class="list-group-item">
+                <strong>Emergency Remarks:</strong>
+                <span class="float-end" style="color: #FF6200;">
+                  <?php echo ($d_emergencyremarks); ?>
+                </span>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
+
+<link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">

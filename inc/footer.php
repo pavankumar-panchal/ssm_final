@@ -60,8 +60,8 @@
 </head>
 
 <body>
-    <div class="container">
-        <footer class="custom-footer mt-4">
+    <div class="container" >
+        <footer class="custom-footer mt-4" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-lg">

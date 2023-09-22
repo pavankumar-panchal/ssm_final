@@ -15,9 +15,6 @@ else {
   type="text/javascript"></script>
 <div id="contentdiv" style="display:block;">
 
-
-
-
   <div class="container users_la mt-5">
     <div class="row">
       <div class="col-md-12">
@@ -37,15 +34,15 @@ else {
                     <div class="opt d-flex flex-row ">
                       <div class="form-check me-3 align-items-center">
 
-                        <label class="form-check-label" for="databasefield11">&nbsp;
+                        <label class="form-check-label" for="incoming">&nbsp;
                           <input class="form-check-input" type="radio" name="calltype" id="incoming" value="incoming">
                           Incoming</label>
                       </div>
                       <div class="form-check me-3 align-items-center">
 
-                        <label class="form-check-label" for="databasefield12">
-                          <input class="form-check-input" type="radio" name="calltype" id="incoming"
-                            value="outgoing">Outgoing</label>
+                        <label class="form-check-label" for="outgoing">
+                          <input class="form-check-input" type="radio" name="calltype" id="outgoing" value="outgoing"
+                            checked>Outgoing</label>
                       </div>
                     </div>
                     <label for="customername" class="form-label">Anonymous:</label>
@@ -76,8 +73,6 @@ else {
                       value="<?php echo ($reportingauthoritytype); ?>" />
                     <input type="hidden" name="hiddenserverdate" id="hiddenserverdate"
                       value="<?php echo (datetimelocal('d-m-Y')); ?>" />
-
-
 
                     <label for="customername" class="form-label">Customer ID:</label>
                     <input name="customerid" type="text" class="form-control" id="customerid" size="20"
@@ -123,7 +118,6 @@ else {
                     </select>
                     <label for="customername" class="form-label">Person version:</label>
                     <span id="productversiondisplay">
-
                       <select name="productversion" class="form-select form-control" id="productversion" onchange="">
                         <option value="" selected="selected">
                           Select a Product
@@ -248,8 +242,6 @@ else {
               <div id="tabgroupgridc2" class="overflow-auto"
                 style="height: 300px; width: 100%; padding: 2px; display: none;" align="center">
                 <!-- Content for tabgroupgridc2 -->
-
-
                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
                   <tr>
                     <td align="center">
