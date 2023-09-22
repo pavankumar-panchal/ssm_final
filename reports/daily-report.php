@@ -11,10 +11,6 @@ include_once('../inc/stylesnscripts.php');
 <link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
 <div id="contentdiv" style="display:block;">
 
-
-
-
-
   <div class="container mt-4">
     <div class="card">
       <div class="card-header">
@@ -71,7 +67,6 @@ include_once('../inc/stylesnscripts.php');
               <div class="col-md-12">
                 <div class="form-group text-right">
                   <div id="processingbar"></div>
-
                   <input name="view" type="submit" class="btn btn-primary" id="view" value="View"
                     onclick="formsubmit('view'); " />
                   <input type="submit" class="btn btn-info" border="0" align="absmiddle"
@@ -84,11 +79,6 @@ include_once('../inc/stylesnscripts.php');
       </div>
     </div>
   </div>
-
-
-
-
-
 
   <div class="container mt-4">
     <div class="card">
@@ -104,8 +94,5 @@ include_once('../inc/stylesnscripts.php');
       </div>
     </div>
   </div>
-
-
-
 
 </div>

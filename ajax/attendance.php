@@ -29,7 +29,21 @@ if ($type == 'dattendance') {
                                 </div>
                                 <div class="card-body">
                                     <table class="table table-bordered">
-                                        <thead class="thead-dark">
+                                        <thead class="bg-info
+										
+										
+										
+										
+										
+										">
+
+
+
+
+
+
+
+										
                                             <tr>
                                                 <th class="text-center">Sun</th>
                                                 <th class="text-center">Mon</th>

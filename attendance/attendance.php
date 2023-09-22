@@ -4,14 +4,11 @@ if ($usertype == 'GUEST')
 else {
   ?>
   <link rel="stylesheet" type="text/css" href="../style/main.css">
- 
 
   <script language="javascript" src="../functions/attendancereport.js" type="text/javascript"></script>
-
   <!-- <p class="content-header">Attendance >
     <?php echo (ucwords(strtolower($loggedusername))); ?>
   </p> -->
-
   <div class="container  mt-4">
     <div class="table-responsive ">
       <table class="table table-bordered  rounded-3"
@@ -104,9 +101,6 @@ else {
     </div>
   </div>
 
-
-
-
   <div class="container">
     <div class="row">
       <div class="col-md-2">
@@ -166,7 +160,5 @@ else {
       </div>
     </div>
   </div>
-
-
 
 <?php } ?>

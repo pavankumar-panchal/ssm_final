@@ -5,8 +5,7 @@ ini_set("display_errors", 1);
 include('../inc/includefiles.php');
 include('../inc/checktype.php');
 include('../inc/teamchart.php');
-/*if($_GET['a_link'] == 'logout')
-  include('../inc/logout.php');*/
+
 
 $localdate = datetimelocal('d-m-Y');
 $localtime = datetimelocal('H:i:s');
@@ -51,8 +50,7 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
 
 ?>
 
-<!DOCTYPE html
-  >
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
@@ -61,7 +59,7 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
     <?php $pagetilte = getpagetitle($_GET['a_link']);
     echo ($pagetilte); ?>
   </title>
-  <?php 
+  <?php
   include('../inc/stylesnscripts.php');
   ?>
 
@@ -73,14 +71,13 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
     google.charts.load('current', { packages: ['annotatedtimeline'] });
     google.charts.setOnLoadCallback(gettimelinedata);
   </script>
-
 </head>
 
 <body marginheight="0" marginwidth="0" onload="bodyonload();">
 
 
-  <?php 
-  include('../inc/navigation.php'); 
+  <?php
+  include('../inc/navigation.php');
   ?>
 
   <?php if ($usertype == 'TEAMLEADER' || $usertype == 'ADMIN' || $usertype == 'MANAGEMENT') { ?>
@@ -107,73 +104,10 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
         style="border-top:#C6C3C6 solid 1px;border-bottom:#C6C3C6 solid 1px; padding:0"></td>
     </tr>
   <?php } ?>
-  <tr>
-    <!-- <td height="24" colspan="2" valign="top" style="border-bottom:1px solid #F0EADE"><span class="navtitle"><img
-          src="../images/doublearrowsnav.gif" align="absmiddle" border="0" />&nbsp;<strong>Reports</strong></span></td> -->
-  </tr>
-  <tr>
-    <td colspan="2">
-
-<!--     
-      <table width="100%" border="0" cellpadding="3" cellspacing="0">
-        <tbody>
-          <?php if ($usertype <> 'GUEST') { ?>
-          <?php } ?>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td width="1"></td>
-            <td><a href="./index.php?a_link=report_callstatistics">Stats &amp; Reports</a>
-          </tr>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td><a href="./index.php?a_link=report_bugstatistics">Error Report</a></td>
-          </tr>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td><a href="./index.php?a_link=report_requirementstatistics">Requirement
-                Report</a></td>
-          </tr>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td><a href="./index.php?a_link=report_onsitestatistics">Onsite Report</a></td>
-          </tr>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td><a href="./index.php?a_link=report_statisticschart">Chart View</a></td>
-          </tr>
-          <?php if ($usertype <> 'GUEST') { ?>
-            <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-              style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-              <td></td>
-              <td><a href="./index.php?a_link=attendance_report">Attendance</a></td>
-            </tr>
-          <?php } ?>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td><a href="./index.php?a_link=report_dailyreport">Daily Report</a></td>
-          </tr>
-          <tr class="smalltext" onmouseover="this.className='hlrow';" onmouseout="this.className='smalltext';"
-            style="cursor: pointer;" onclick="javascript:window.location.href='#';">
-            <td></td>
-            <td>&nbsp;</td>
-          </tr>
-        </tbody>
-      </table> -->
-
-
-
-    </td>
-  </tr>
 
   <td valign="top" class="content-box"><input name="navigationtabcount" id="navigationtabcount" type="hidden"
       value="<?php echo ($navigationtabcount); ?>" />
     <?php
-    // if (!$_GET['a_link'] || $_GET['a_link'] == 'home_dashboard') {
     ?>
     <?php if (!isset($_GET['a_link']) || $_GET['a_link'] == 'home_dashboard') { ?>
 
@@ -192,14 +126,15 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                 <div id="dash_timeline">
                   <div class="row">
                     <div class="col-md-12">
-                      <div id="chart_div" style="width: 100%; height: 240px;">
+                      <div id="chart-container">
+                        <div id="chart_div" style="width: 100%; height: 350px;"></div>
                       </div>
-                      <br />
-                      <div class="text-end">
-                        <?php if ($usertype !== 'GUEST') { ?>
-                          <a href="./index.php?a_link=report_statisticschart" class="btn btn-primary">Advanced</a>
-                        <?php } ?>
-                      </div>
+                    </div>
+                    <br />
+                    <div class="text-end">
+                      <?php if ($usertype !== 'GUEST') { ?>
+                        <a href="./index.php?a_link=report_statisticschart" class="btn btn-primary">Advanced</a>
+                      <?php } ?>
                     </div>
                   </div>
                 </div>
@@ -208,18 +143,9 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
           </div>
         </div>
       </div>
-
-
-
-
-
-
-
+      </div>
 
       <?php if ($usertype <> 'GUEST') { ?>
-
-
-
         <div class="container mt-4">
           <div class="row">
             <div class="col-md-12">
@@ -230,17 +156,14 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                     aria-expanded="false">
                     <i id="toggleimg3" class="fas fa-plus"></i>
                   </button>
-
-
                 </div>
-
                 <div class="" id="dash_teamchart">
                   <div class="card-body">
                     <div class="row">
                       <div class="col-md-12">
-                        <?php 
+                        <?php
                         echo ($attendanceCal);
-                         ?>
+                        ?>
                       </div>
                     </div>
                   </div>
@@ -250,22 +173,7 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
           </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
       <?php } ?>
-
-
-
-
-
       <div class="container mt-4">
         <div class="row">
           <div class="col-md-12">
@@ -291,13 +199,6 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
         </div>
       </div>
 
-
-
-
-
-
-
-
       <div class="container mt-4 ">
         <div class="row">
           <div class="col-md-12">
@@ -306,7 +207,6 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                 Login Summary
               </div>
               <div class="card-body">
-
                 <div id="dash_loginsummary">
                   <div class="table-responsive">
                     <table class="table">
@@ -336,21 +236,11 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
         </div>
       </div>
 
-
-
-
-
-
-
-
-
     <?php } else {
       $pagelink = getpagelink($_GET['a_link']);
       include($pagelink);
     } ?>
-
 </body>
 
 </html>
-
 <?php include("../inc/footer.php");

@@ -4,8 +4,7 @@ if (!isset($message)) {
 }
 
 ?>
-
-
+<link rel="stylesheet" type="text/css" href="../style/main.css?dummy = <?php echo (rand()); ?>">
 <script language="javascript" src="../functions/editprofile.js?dummy = <?php echo (rand()); ?>"
   type="text/javascript"></script>
 
@@ -106,10 +105,11 @@ if (!isset($message)) {
               <div id="form-error"></div>
             </div>
             <div class="col-md-4 text-end mt-3">
-              <input name="clear" type="reset" class="btn btn-secondary" id="view" value="New"
-                onclick="formsubmit('toview');">
               <input name="update" type="submit" class="btn btn-primary " id="update" value="update"
                 onclick="formsubmit('update');">
+              <input name="clear" type="reset" class="btn btn-secondary" id="view" value="New"
+                onclick="formsubmit('toview');">
+
             </div>
           </div>
         </div>
@@ -184,7 +184,7 @@ if (isset($_POST["update"])) {
             </div>
           </div>
           <div class="form-group row">
-            <div class="col-sm-9 offset-sm-3 ">
+            <div class="col-sm-9 offset-sm-3 text-end">
               <input name="update" type="submit" class="btn btn-primary up" id="update" value="Update">
               <input name="clear" type="reset" class="btn btn-secondary up" id="clear" value="Clear"
                 onclick="document.getElementById('form-error').innerHTML = ''">
@@ -197,6 +197,4 @@ if (isset($_POST["update"])) {
 </div>
 <!--  -->
 <div class="col-md-12">
-</div>
-</div>
 </div>
