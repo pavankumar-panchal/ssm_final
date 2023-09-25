@@ -730,15 +730,12 @@ $userid = imaxgetcookie('ssmuserid'); ?>
                 More
                 >></a> </div>
     </div>
-
     <!-- Add the following script tag at the end of the body to include Bootstrap JS and custom JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script> let rowCounter = 1; function adddescriptionrows() { const tableBody = document.getElementById('adddescriptionrows'); const lastRow = tableBody.lastElementChild; const newRow = lastRow.cloneNode(true); rowCounter++; newRow.querySelector('td:first-child').innerText = rowCounter; const inputs = newRow.querySelectorAll('input'); const selectElement = newRow.querySelector('select'); selectElement.name = `selectiontype${rowCounter}`; selectElement.id = `selectiontype${rowCounter}`; inputs.forEach(input => { const inputName = input.name; input.name = inputName.replace(/\d+/, rowCounter); input.value = ''; }); const removeLink = newRow.querySelector('.removerow'); removeLink.addEventListener('click', () => { removedescriptionrows(newRow); }); tableBody.appendChild(newRow); } function row() { if (rowCounter == 1) { alert("Can't delete this row"); } } function removedescriptionrows(rowToRemove) { const tableBody = document.getElementById('adddescriptionrows'); tableBody.removeChild(rowToRemove); rowCounter--; const rows = tableBody.getElementsByTagName('tr'); for (let i = 0; i < rows.length; i++) { rows[i].getElementsByTagName('td')[0].innerText = i + 1; const inputs = rows[i].querySelectorAll('input'); const selectElement = rows[i].querySelector('select'); selectElement.name = `selectiontype${i + 1}`; selectElement.id = `selectiontype${i + 1}`; inputs.forEach(input => { const inputName = input.name; input.name = inputName.replace(/\d+/, i + 1); }); } } </script>
     <!--  -->
     <div class="col-md-12"> </div>
 </div>
-
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script>
