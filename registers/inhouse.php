@@ -16,16 +16,17 @@ else {
 
 
 
-<div class="card container" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
-            <div class="card-header bg-light d-flex justify-content-between" onclick="showhide('maindiv','toggleimg');">
-                <div>&nbsp;&nbsp;Enter/Edit/View Details</div>
+<div class="card container mt-5" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363); padding=0px -40px 0px -40px;"   >
+            <div class="card-header bg-light d-flex justify-content-between " onclick="showhide('maindiv','toggleimg');">
+                <div>Enter/Edit/View Details</div>
                 <div align="right">
                 <img src="../images/minus.jpg" border="0" id="toggleimg" name="toggleimg"
                   align="absmiddle" />
                 </div>
             </div>
+            <div id="maindiv" style="display: block;">
+
             <div class="card-body">
-                <div id="maindiv" style="display: block;">
                     <div class="row">
                         <div class="col-md-6">
                             <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
@@ -35,12 +36,12 @@ else {
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="anonymous"
                                                 id="databasefield12" value="yes" onclick="formsubmitcustomer();">
-                                            <label class="form-check-label" for="anonymous-yes">Yes</label>
+                                            <label class="form-check-label" for="databasefield12">Yes</label>
                                         </div>
                                         <div class="form-check form-check-inline">
                                             <input class="form-check-input" type="radio" name="anonymous"
-                                                id="databasefield13" value="no" onclick="formsubmitcustomer();">
-                                            <label class="form-check-label" for="anonymous-no">No</label>
+                                                id="databasefield13" value="no" onclick="formsubmitcustomer();" checked>
+                                            <label class="form-check-label" for="databasefield13">No</label>
                                         </div>
                                     </div>
 

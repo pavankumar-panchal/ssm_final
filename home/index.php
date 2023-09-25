@@ -114,6 +114,7 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
       <script type="text/javascript" src="http://www.google.com/jsapi"></script>
       <script language="javascript" src="../functions/annotatedtimeline.js" type="text/javascript"></script>
 
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
       <div class="container mt-4 ">
         <div class="row">
@@ -127,7 +128,12 @@ $attendanceCal = attendanceCalendardashboard(date('m'), $year, $user);
                   <div class="row">
                     <div class="col-md-12">
                       <div id="chart-container">
-                        <div id="chart_div" style="width: 100%; height: 350px;"></div>
+                        <!-- <div id="chart_div" style="width: 100%; height: 350px;"></div> -->
+
+
+
+                        <div id="chart_div" style="width: 100%; height: 400px;"></div>
+
                       </div>
                     </div>
                     <br />

@@ -10,12 +10,11 @@ else {
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 
   <div id="contentdiv" style="display:block;">
-  
+
     <div class="container mt-5">
       <div class="card" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
         <div class="card-header bg-light" style="cursor: pointer;" onclick="showhide('maindiv','toggleimg');">
           <span class="">Enter/Edit/View Details</span>
-
         </div>
         <div class="card-body" id="maindiv" style="display: block;">
           <form action="" method="post" name="submitform" id="submitform" onsubmit="return false;">
@@ -78,7 +77,6 @@ else {
                   <!-- Add other options here -->
                 </select>
               </div>
-
               <div class="col-md-6">
                 <label for="chequeno" class="form-label">Cheque Number:</label>
                 <input name="chequeno" type="text" class="form-control" id="chequeno" autocomplete="off">
@@ -99,9 +97,7 @@ else {
                 <textarea name="remarks" cols="45" class="form-control" id="remarks" data-gramm="false"
                   wt-ignore-input="true"></textarea>
               </div>
-
             </div>
-
             <div class="row">
               <div class="col-md-12">
                 <div class="text-end float-right">
@@ -112,7 +108,6 @@ else {
                     onclick="formsubmit('save');">Save</button>
                   <button name="delete" type="submit" class="btn btn-danger" id="delete" onclick="formsubmit('delete');"
                     disabled> Delete</button>
-
                 </div>
               </div>
             </div>
@@ -120,10 +115,6 @@ else {
         </div>
       </div>
     </div>
-
-
-
-
 
 
     <div class="container mt-5">
@@ -171,8 +162,6 @@ else {
                 <div id="tabgroupgridc2" class="overflow-auto"
                   style="height: 300px; width: 100%; padding: 2px; display: none;" align="center">
                   <!-- Content for tabgroupgridc2 -->
-
-
                   <table width="100%" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <td align="center">
@@ -204,15 +193,13 @@ else {
         </div>
       </div>
     </div>
-
-
   </div>
 
   <div id="nameloaddiv" style="display:none;">
     <table width="100%" border="0" cellspacing="0" cellpadding="4">
-      <tr>
+      <!-- <tr>
         <td class="content-header" style="position:relative; bottom: 580px;">Call Register > Get Customer</td>
-      </tr>
+      </tr> -->
       <tr>
         <td>
           <div id="gc-form-error"></div>
@@ -236,7 +223,5 @@ else {
       <?php include('../inc/questionload.php'); ?>
     </table>
   </div>
-
-
 
 <?php } ?>

@@ -7,7 +7,7 @@
     <title>Document</title>
     <!-- Add Bootstrap CSS link here -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    
+
     <style>
         /* Custom CSS for footer */
         .custom-footer {
@@ -60,12 +60,12 @@
 </head>
 
 <body>
-    <div class="container" >
+    <div class="container">
         <footer class="custom-footer mt-4" style="box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.363);">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-lg">
-                        <div class="single-footer-widget">
+                        <div class="single-footer-widget ml-5">
                             <div class="footer-logo footer_logo mb-3"></div>
                             <p class="text-black">Connect to Relyonsoft <i class="lni-heart mr-1"></i><a class="ml-1"
                                     href="https://wrapbootstrap.com/user/DesigningWorld"> </a></p>
@@ -130,9 +130,9 @@
                     </div>
                 </div>
             </div>
-            <div class="foot">
-                <p>A product of Relyon Web Management | Copyright © 2023 Relyon Softech Ltd. All rights
-                    reserved</p>
+            <div class="foot " style="color:gray;">
+                <p>A Product Of Relyon Web Management | Copyright © 2023 Relyon Softech Ltd. All Rights
+                    Reserved</p>
             </div>
         </footer>
     </div>
